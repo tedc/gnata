@@ -1,0 +1,275 @@
+.mappa{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    @include container(100%);
+    @include breakpoint($medium){
+        margin-bottom: rem(150);
+    }
+    @include breakpoint($medium){
+        height: 570px;
+    }
+
+    &__overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        display: none;
+        padding: rem(80) rem(40) 0 0;
+        width: 50%;
+        height: 570px;
+        background: rgba(#fff, .8);
+        font-size: 14px;
+        opacity: 1;
+
+        @include breakpoint($medium){
+            display: block;
+        }
+        @include breakpoint($large){
+            font-size: 16px;
+        }
+    }
+
+    &__contatti,.contatti-mobile{
+        z-index: 2;
+        padding-right: rem(20);
+        max-width: 643px;
+        width: 100%;
+        color: $font-color;
+        text-align: right;
+        font-size: 16px;
+        line-height: 1.4;
+        opacity: 1;
+
+        @include breakpoint($large){
+            padding-right: rem(40);
+            font-size: 22px;
+        }
+
+        h2{
+            color: $blu;
+            font-weight: 700;
+            font-size: 1.636em;
+            line-height: .8;
+
+            + span{
+                display: block;
+                padding-bottom: rem(40);
+                text-transform: uppercase;
+                font-size: 1.091em;
+                line-height: 1.4;
+            }
+        }
+
+        p{
+            padding-bottom: 1.364em;
+        }
+
+        a{
+            color: $font-color;
+            text-decoration: none;
+        }
+    }
+
+    &__mail{
+        display: block;
+        padding-bottom: rem(30);
+        color: $blu!important;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+.contatti-mobile{
+    padding: rem(40);
+    color: $font-color;
+    text-align: center;
+    font-size: rem(22);
+    line-height: rem(30);
+
+    @include container(1286px);
+    @include breakpoint($medium){
+        display: none;
+    }
+
+    h2{
+        color: $blu;
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: rem(44);
+
+        + span{
+            display: block;
+            padding-bottom: rem(40);
+            text-transform: uppercase;
+            font-size: rem(24);
+            line-height: rem(30);
+        }
+    }
+
+    p{
+        padding-bottom: rem(30);
+    }
+
+    a{
+        color: $font-color;
+        text-decoration: none;
+    }
+}
+
+#mappa{
+    position: relative;
+    z-index: 0;
+    height: 350px;
+
+    @include breakpoint($medium){
+        height: 570px;
+    }
+}
+
+.personale{
+    padding: 0 rem(40) rem(40);
+    color: $font-color;
+    font-size: rem(20);
+    line-height: rem(38);
+
+    @include container(1286px);
+    @include breakpoint($medium){
+        margin-bottom: rem(150);
+        padding: 0;
+    }
+
+    &__utente{
+        padding: rem(20);
+        border: 1px solid $grey--dark;
+        background-color: #fff;
+        text-align: center;
+
+        @include breakpoint($medium){
+            padding: rem(40) rem(20);
+            border-right: 0;
+
+            @include gallery(4 of 12);
+        }
+
+        &:nth-child(3n){
+            @include breakpoint($medium){
+                border-right: 1px solid $grey--dark;
+            }
+        }
+    }
+
+    &__name{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: rem(24);
+        line-height: rem(30);
+    }
+
+    &__mail{
+        display: block;
+        color: $blu;
+        text-decoration: none;
+        font-size: rem(22);
+        line-height: rem(38);
+    }
+}
+
+.superwrapper{
+    position: absolute;
+    bottom: rem(30)!important;
+    left: rem(40)!important;
+    width: 40px;
+    height: 91px;
+
+    @include breakpoint($medium){
+        right: auto!important;
+        bottom: rem(40)!important;
+        left: rem(40)!important;
+        width: 60px;
+        height: 142px;
+    }
+    @include breakpoint(1366px){
+        right: 50%!important;
+        left: auto!important;
+        width: 60px;
+        transform: translateX(-583px);
+    }
+}
+
+.zoomwrapper{
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 91px;
+
+    @include breakpoint($medium){
+        left: 0;
+        width: 60px;
+        height: 142px;
+    }
+    @include breakpoint(1366px){
+        right: 0;
+        left: 0!important;
+        width: 50px;
+    }
+
+    &__plus,&__minus{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 100%;
+        background-color: $blu;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+        cursor: pointer;
+
+        @include breakpoint($medium){
+            width: 60px;
+            height: 60px;
+        }
+
+        &:before{
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            background: url('../images/mapplus.png') center center no-repeat;
+            background-size: contain;
+            content: '';
+
+            @include breakpoint($medium){
+                top: 21px;
+                left: 21px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__minus{
+        top: auto;
+        bottom: 0;
+
+        &:before{
+            background: url('../images/mapminus.png') center center no-repeat;
+            background-size: contain;
+
+            @include breakpoint($medium){
+                top: 21px;
+                left: 21px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.tabella{
+    padding: rem(20) rem(40);
+
+    @include breakpoint($medium){
+        max-width: 920px;
+        margin: 0 auto;
+        padding: rem(120) 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+
+    &__title{
+        font-family: $header-font;
+        font-size: rem(36);
+        line-height: rem(30);
+        letter-spacing: 0.04px;
+        color: $blu;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    table{
+        width: 100%;
+        text-align: left;
+    }
+
+    th{
+        font-family: $body-font;
+        font-size: rem(16);
+        font-weight: 200;
+        line-height: 1.4;
+        color: #aaacae;
+        text-transform: uppercase;
+        padding: 0 rem(21) rem(14) 0;
+        
+        @include breakpoint($medium){
+            padding: 0 rem(42) rem(28);
+        }
+    }
+
+    td{
+        font-family: $body-font;
+        font-size: rem(16);
+        font-weight: 200;
+        line-height: 1.4;
+        padding: rem(14) 0; 
+        color: $font-color;
+        border-top: 1px solid $grey--dark;
+        border-bottom: 1px solid $grey--dark;
+
+        @include breakpoint($medium){
+            padding: rem(28) rem(42) rem(28);
+        }
+    }
+
+    tr td:first-child{
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $blu;
+    }
+
+    &.is-visible{
+
+        @include breakpoint($medium){
+            opacity: 1;
+        }
+    }
+}

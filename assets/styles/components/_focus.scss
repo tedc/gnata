@@ -1,0 +1,151 @@
+.focus{
+    @include container(1286px);
+    padding: 0 rem(40);
+    position: relative;
+    z-index: 0;
+    
+    @include breakpoint($medium){
+        padding: 0;
+    }
+
+    &__content{
+        width: 100%;
+        padding: rem(40) 0;
+        
+        @include breakpoint($medium){
+            width: 47%;
+            float: left;
+            padding: rem(160) rem(40);
+        }
+
+        .focus.focus--inverted &{
+            width: 100%;
+
+            @include breakpoint($medium){
+                width: 53%;
+                float: right;
+                padding: rem(160) rem(80);
+            }
+        }
+
+        font-size: rem(22);
+        line-height: rem(33);
+        font-weight: 200;
+        letter-spacing: 0.04px;
+        color: #fff;
+
+        @include breakpoint($medium){
+            color: $font-color;
+        }
+
+        h2{
+            font-family: $header-font;
+            color: $blu;
+            font-size: rem(80);
+            line-height: rem(72);
+            font-weight: 400;
+        }
+
+        h3{
+            font-family: $header-font;
+            font-size: rem(55);
+            line-height: rem(50);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.04px;
+            color: $blu;
+        }
+
+        h4{
+            font-size: rem(30);
+            line-height: rem(45);
+            font-weight: 300;
+            letter-spacing: 0.04px;
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__visual{
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;    
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            @include breakpoint($medium){
+                display: none;
+            }
+        }
+
+        @include breakpoint($medium){
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: auto;
+            width: 53%;
+            height: 100%;
+        }
+
+        .focus.focus--inverted &{
+            @include breakpoint($medium){
+                position: absolute;
+                left: 0;
+                right: auto;
+                top: 0;
+                width: 47%;
+                height: 100%;
+            }
+        }
+
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__playcontainer{
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid #fff;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+        z-index: 999;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    &__play{
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 18px solid #fff;
+        position: absolute;
+        top: 13px;
+        left: 15px;
+    }
+}

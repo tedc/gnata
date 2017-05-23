@@ -1,0 +1,149 @@
+body#tinymce{
+    margin: 12px !important;
+}
+
+.acf-field-name-macchina_desc{
+    h2{
+        font-size: rem(22);
+        line-height: rem(30);
+        color: $blu;
+        font-family: $body-font;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+        padding-top: rem(30);
+        padding-bottom: rem(15);
+
+        &:after{
+            content: '';
+            height: 1px;
+            width: 20%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $grey--dark;
+        }
+    }
+
+    p{
+        font-size: rem(16);
+        line-height: rem(28);
+        font-weight: 200;
+        margin-bottom: rem(15);
+    }
+
+    span{
+        font-size: rem(16);
+        line-height: rem(28);
+        text-transform: uppercase;
+        color: $font-color;
+        font-weight: 200;
+    }
+
+    ul{
+        font-size: rem(16);
+        line-height: rem(28);
+        padding-top: rem(12);
+        font-weight: 200;
+
+        li{
+            position: relative;
+            padding: 0 0 0 rem(15);
+            margin-bottom: rem(6);
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $blu;
+                border-radius: 100%;
+                top: rem(12);
+                left: 0;
+            }
+        }
+    }
+}
+
+.acf-field-name-flex_focus_text,
+.acf-field-name-flex_paragraph{
+    font-size: rem(22);
+    line-height: rem(33);
+    font-weight: 200;
+    letter-spacing: 0.04px;
+    color: $font-color;
+
+    h2{
+        font-family: $header-font;
+        color: $blu;
+        font-size: rem(80);
+        line-height: rem(72);
+        font-weight: 400;
+    }
+
+    h3{
+        font-family: $header-font;
+        font-size: rem(55);
+        line-height: rem(50);
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $blu;
+    }
+
+    h4{
+        font-size: rem(30);
+        line-height: rem(45);
+        font-weight: 300;
+        margin-bottom: rem(30);
+    }
+}
+
+.acf-layout-flex_news_text{
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: 200;
+    letter-spacing: 0.04px;
+    color: $font-color;
+
+    h1{
+        font-family: $header-font;
+        color: $blu;
+        font-size: rem(50);
+        line-height: rem(45);
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: rem(70);
+    }
+
+    h2{
+        font-size: rem(22);
+        line-height: rem(33);
+        font-weight: 200;
+        letter-spacing: 0.04px;
+        margin-bottom: 0.2em;
+    }
+
+    ul:not(.slick-dots){
+        font-size: rem(16);
+        line-height: rem(28);
+        padding-top: rem(12);
+        font-weight: 200;
+
+        li{
+            position: relative;
+            padding: 0 0 0 rem(15);
+            margin-bottom: rem(6);
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $blu;
+                border-radius: 100%;
+                top: rem(12);
+                left: 0;
+            }
+        }
+    }
+}

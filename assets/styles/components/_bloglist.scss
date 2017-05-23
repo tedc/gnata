@@ -1,0 +1,137 @@
+.bloglist{
+    @include container(1286px);
+    padding: rem(50) rem(40) rem(50);
+
+    @include breakpoint($medium){
+        padding-top: rem(130);
+        padding-bottom: rem(150);
+        padding-left: 0;
+    }
+
+    &__sidebar{
+        
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
+            padding: 0 rem(40);
+        }
+
+        h1{
+            display: block;
+            font-family: $header-font;
+            font-size: rem(80);
+            line-height: rem(72);
+            font-weight: 700;
+            letter-spacing: 0.04px;
+            text-transform: uppercase;
+            color: $blu;
+            padding-bottom: rem(50);
+
+            @include breakpoint($medium){
+                font-size: rem(60);
+                line-height: 1.4;
+                padding-bottom: 0;
+            }
+
+            @include breakpoint($large){
+                font-size: rem(80);
+                line-height: rem(72);
+            }
+        }
+    }
+
+    &__list{
+        
+        @include breakpoint($medium){
+            @include span(9 of 12 0 after);
+        }
+    }
+    &__article{
+        @include container(100%);
+        position: relative;
+        border: 1px solid $grey--dark;
+        background-color: #fff;
+        padding: rem(20) rem(20) 0;
+
+        @include breakpoint($medium){
+            padding: rem(35) 0;
+        }
+
+        &:first-child{
+            border: 1px solid $grey--dark;
+            border-bottom: 0;
+        }
+
+        &:last-child{
+            border: 1px solid $grey--dark;
+            border-top: 0;
+        }
+    }
+
+    &__img{
+        @include span(12 of 12);
+        height: 150px;
+        border-bottom: 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        padding: 0;
+        border: 1px solid $grey--dark;
+
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-top: 0;
+            border-left: 0;
+            border-bottom: 0;
+        }
+    }
+
+    &__content{
+        @include span(12 of 12);
+        letter-spacing: 0.04px;
+        padding: rem(10) 0;
+
+        @include breakpoint($medium){
+            @include span(9 of 12 0 after last);
+            padding: 0 rem(40);
+        }
+
+        span{
+            display: block;
+            color: $font-color;
+            font-size: rem(18);
+            line-height: rem(25);
+            margin-bottom: 0.2em;
+            
+            @include breakpoint($medium){
+                margin-bottom: 1em;
+            }
+        }
+
+        h3, h3 > a{
+            font-family: $body-font;
+            text-transform: uppercase;
+            color: $blu;
+            font-size: rem(24);
+            line-height: 1;
+            font-weight: 300;
+            text-decoration: none;
+        }
+
+        p{
+            padding: rem(20) 0;
+        }
+
+        a{
+            font-size: rem(16);
+            line-height: rem(50);
+            font-weight: 700;
+            letter-spacing: 0.08px;
+            color: $blu;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.accordion{
+    font-size: rem(16);
+    line-height: rem(28);
+    letter-spacing: 0.04px;
+    color: $font-color;
+    position: relative;
+    border: 1px solid $grey--dark;
+    border-bottom: 0;
+
+    &:last-child{
+        border-bottom: 1px solid $grey--dark;
+    }
+
+    &__header{
+        padding: rem(40);
+        position: relative;
+    }
+
+    &.open{
+        h2{
+            color: $blu;
+        }
+    }
+
+    h2{
+        font-size: rem(24);
+        line-height: rem(30);
+        font-weight: 300;
+        letter-spacing: 0.04px;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+    }
+
+    p{
+        padding: 0 rem(40) rem(40);
+    }
+
+    &__button{
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        right: rem(40);
+        top: 50%;
+        transform: translateY(-25%);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        .accordion.open &{
+            transform: translateY(-50%);
+        }
+
+        .ll, .rl{
+            background-color: $font-color;
+            width: 16px;
+            height: 1px;
+            display: block;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .ll{
+            left: 0;
+            transform-origin: top left;
+            transform: rotate(45deg);
+
+            .accordion.open &{
+                width: 32px;
+            }
+        }
+
+        .rl{
+            right: 0;
+            transform-origin: top right;
+            transform: rotate(-45deg);
+
+            .accordion.open &{
+                width: 32px;
+            }
+        }
+    }
+}

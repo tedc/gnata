@@ -1,0 +1,29 @@
+{
+    "remotePath": "/gnata.webaglio.it/wp-content/themes/gnata",
+    "host": "ftp.webaglio.it",
+    "username": "cqxiukot",
+    "password": "DmFy35b4c3",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "node_module",
+        "bower_components",
+        "assets",
+        "dist/images/gnata-corporate.mp4",
+        "vendor"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

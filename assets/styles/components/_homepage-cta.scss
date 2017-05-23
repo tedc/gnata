@@ -1,0 +1,41 @@
+.homepage-cta{
+    
+    @include container(1286px);
+    padding: rem(93) rem(40);
+    
+    @include breakpoint($medium){
+        padding: rem(93) 0;
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+
+    
+
+    &__paragrafo{
+        background-color: #fff;
+        border: 1px solid $grey--dark;
+        padding: rem(40);
+
+        @include breakpoint($medium){
+            width: 55%;
+            padding: rem(50) rem(80);
+        }
+
+        h4{
+            font-size: rem(36);
+            line-height: 1;
+            font-weight: 700;
+            color: $blu;
+            text-transform: uppercase;
+            padding-bottom: rem(29)
+        }
+
+        p{
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: 40;
+            color: $font-color;
+            margin-bottom: 2em;
+        }
+    }
+}

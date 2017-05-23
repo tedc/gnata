@@ -1,0 +1,108 @@
+.lista-marcatrici{
+
+    @include container(1286px);
+    @include clearfix;
+
+    &__marcatrice{
+        padding: rem(40);
+        margin-bottom: rem(40);
+        background-size: cover;
+        background-image: url('../images/gnata-marcatrici-caldo.jpg');
+
+        @include breakpoint($medium){
+            position: relative;
+            background-image: url('../images/gnata-marcatrici-caldo.jpg');
+            background-repeat: no-repeat;
+            min-height: 603px;
+            padding: 0 rem(40) 0;
+            margin-bottom: rem(200);
+            background-size: auto;
+
+            &:nth-child(odd){
+                background-position: bottom right;
+            }
+
+            &:nth-child(even){
+                background-position: bottom left;
+            }
+        }
+
+        @include breakpoint(1366px){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__paragrafo{
+        background-color: #fff;
+        border: 1px solid $grey--dark;
+        padding: rem(40);
+        text-align: center;
+
+        @include breakpoint($medium){
+            width: 55%;
+            padding: rem(80);
+            text-align: left;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.5s ease-out,
+                        opacity 0.3s ease-out;
+
+            .lista-marcatrici__marcatrice:nth-child(even) &{
+                float: right;
+                transform: translateX(100%);
+            }
+        }
+
+        &.active{
+            
+            @include breakpoint($medium){
+                transform: translateX(0%);
+                opacity: 1;
+            }
+
+            .lista-marcatrici__marcatrice:nth-child(even) &{
+                transform: translateX(0%);
+            }
+        }
+
+        h2{
+            color: $blu;
+            font-family: $body-font;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: rem(36);
+            line-height: 1;
+            text-align: center;
+            padding-bottom: rem(20);
+
+            @include breakpoint($medium){
+                padding-bottom: rem(40-6);
+                text-align: left;
+            }
+        }
+
+        p{
+                font-size: rem(16);
+                line-height: rem(28);
+                letter-spacing: rem(0.04);
+                color: $font-color;
+                text-align: center;
+                padding-bottom: rem(30);
+
+                @include breakpoint($medium){
+                    text-align: left;
+                }
+            }
+    }
+
+    &__visual{
+
+        @include breakpoint($medium){
+            position: absolute;
+            width: 55%;
+            background-image: url('../images/gnata-marcatrici-caldo.jpg');
+            height: 300px;
+        }
+    }
+}

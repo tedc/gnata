@@ -1,0 +1,102 @@
+.shift{
+    
+    @include container(100%);
+    position: relative;
+    
+    @include breakpoint($medium){
+        padding: 0;
+    }
+
+    &__struttura{
+        @include container(1286px);
+    }
+
+    &__content{
+        width: 100%;
+        color: $font-color;
+        font-size: rem(16);
+        line-height: rem(28);
+        letter-spacing: 0.04px;
+        font-weight: 200;
+        padding: rem(40);
+        
+        @include breakpoint($medium){
+            width: span(42%);
+            padding: rem(80) rem(40);
+        }
+
+        @include breakpoint($large){
+            padding: rem(130) rem(70);
+        }
+
+        .shift--inverted &{
+            float: right;
+        }
+
+        h2{
+            font-family: $header-font;
+            font-size: rem(50);
+            line-height: rem(45);
+            letter-spacing: 0.02px;
+            color: $blu;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        h3{
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: 0.06px;
+            text-transform: uppercase;
+            padding-bottom: 0.3em;
+        }
+
+        p{
+            padding-bottom: 0.3em;
+        }
+
+        ul:not(.slick-dots){
+        font-size: rem(16);
+        line-height: rem(28);
+        padding-top: rem(12);
+        font-weight: 200;
+
+        li{
+            position: relative;
+            padding: 0 0 0 rem(15);
+            margin-bottom: rem(6);
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $blu;
+                border-radius: 100%;
+                top: rem(12);
+                left: 0;
+                }
+            }
+        }
+    }
+
+    &__visual{
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 120px;
+
+        @include breakpoint($medium){
+            width: 52%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .shift--inverted &{
+            right: auto;
+            left: 0;
+        }
+    }
+}

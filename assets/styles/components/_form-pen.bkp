@@ -1,0 +1,236 @@
+.main-form{
+    @include container(1286px);
+    padding: 0 rem(40) rem(60);
+
+    @include breakpoint($medium){
+        padding-bottom: rem(150);
+    }
+}
+
+.form-title{
+    font-size: rem(20);
+    line-height: rem(27);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $blu;
+}
+
+form{
+    font-weight: 200;
+    color: #939598;
+    text-align: left;
+    vertical-align: middle;
+    font-size: rem(22);
+    line-height: 1.4;
+
+    @include breakpoint($medium){
+        font-size: rem(55);
+        line-height: rem(79);
+    }
+
+    span{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+    input,
+    select,
+    textarea{
+        padding: 0;
+        border: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        color: $blu;
+           -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        font-size: rem(22);
+        line-height: 1.4;
+
+        @include breakpoint($medium){
+            max-width: 600px;
+            min-width: 80px;
+            font-size: rem(22);
+            line-height: rem(33);
+        }
+
+        &::placeholder{
+            color: lighten(#939598, 20%);
+        }
+
+        &.wpcf7-not-valid{
+            &::placeholder{
+                color: #fca5b1;
+            }
+        }
+
+        @include breakpoint($medium){
+            font-size: rem(55);
+            line-height: rem(79);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .wpcf7-form-control-wrap.marcare{
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+
+        @include breakpoint($medium){
+            width: 250px;
+        }
+    }
+
+    .wpcf7-form-control-wrap.richiesta{
+        width: 600px!important;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+
+    .cf7mls_next.cf7mls_btn.action-button,
+    .cf7mls_back.action-button{
+        background-color: transparent;
+        border: 1px solid $blu;
+        color: $blu;
+        text-transform: uppercase;
+        display: block;
+        float: right;
+        font-size: rem(16);
+        line-height: 1;
+        margin: 0.4em 0;
+        transition: all 0.3s ease-out;
+        padding: rem(10) rem(15);
+        font-size: rem(16);
+
+        @include breakpoint($medium){
+            font-size: rem(16);
+            line-height: 1;
+            padding: rem(23) rem(75);
+        }
+
+        &:hover{
+            background-color: $blu;
+            color: #fff;
+        }
+    }
+
+    .cf7mls_back.action-button{
+        float: left;
+        margin: 0.4em 0;
+        padding: rem(10) rem(15);
+        font-size: rem(16);
+
+        @include breakpoint($medium){
+            padding: rem(23) rem(75);
+        }
+    }
+
+    .form-separator{
+        width: 100%;
+        height: 1px;
+        display: block;
+        clear: both;
+    }
+}
+
+.form-footer{
+    @include container(100%);
+    padding: rem(20) 0;
+
+    @include breakpoint($medium){
+        padding: rem(60) 0;
+    }
+
+    .legal-container{
+        
+        @include span(100%);
+
+        font-size: rem(14);
+        line-height: 1;
+        position: relative;
+        height: rem(64);
+
+        @include breakpoint($medium){
+            @include span(70%);
+        }
+
+        span{
+            
+            @include breakpoint($medium){
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .formbutton-container{
+
+        @include span(100%);
+        text-align: center;
+        
+        @include breakpoint($medium){
+            @include span(30%);
+        }   
+    }
+}
+
+.wpcf7-submit{
+    background-color: transparent;
+    border: 1px solid $blu;
+    color: $blu;
+    text-transform: uppercase;
+    display: block;
+    font-size: rem(16);
+    line-height: 1;
+    margin: 0 auto;
+    transition: all 0.3s ease-out;
+    padding: rem(10) rem(15);
+    font-weight: 700;
+
+    @include breakpoint($medium){
+        padding: rem(23) rem(75);
+        float: right;
+        margin: 0;
+    }
+
+    &:hover{
+        background-color: $blu;
+        color: #fff;
+    }
+}
+
+span.wpcf7-not-valid-tip{
+    display: none;
+}
+
+.wpcf7-not-valid{
+    color: #fca5b1;
+
+    &:placeholder{
+        color: red!important;
+    }
+}
+
+.wpcf7-response-output{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wpcf7-validation-errors{
+    font-size: rem(22);
+    line-height: rem(33);
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+    background-color: #ffea00;
+}

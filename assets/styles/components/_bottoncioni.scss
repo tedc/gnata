@@ -1,0 +1,85 @@
+.bottoncioni-container{
+    @include container(1366px);
+}
+
+.bottoncione{
+    background-color: #fff;
+    border: 1px solid $grey--dark;
+    font-size: rem(22);
+
+    @include breakpoint($medium){
+        @include span(4 of 12 0 after);
+    }
+
+    &--half{
+
+        @include breakpoint($medium){
+            @include span(6 of 12 0 after);
+        }
+    }
+
+    &--third{
+
+        @include breakpoint($medium){
+            @include span(4 of 12 0 after);
+        }
+    }
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+        color: $font-color;
+        transition: color 0.3s ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:hover{
+            color: #fff;
+            &:after{
+                padding-left: 0;
+                transition: padding 0.3 ease-in-out;
+            }
+        }
+
+        &:before{
+            content: '';
+            display: block;
+            padding-left: 100%;
+            height: 100%;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -2;
+            opacity: 0.3;
+        }
+
+        &:after{
+            content: '';
+            display: block;
+            padding-left: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            transition: padding 0.3s ease-in-out;
+        }
+    }
+
+    span{
+        display: block;
+        padding: rem(24) 0 rem(24) rem(39);
+        z-index: 1;
+
+        @include breakpoint($medium){
+            padding: rem(54) 0 rem(54) rem(39);
+        }
+    }
+}

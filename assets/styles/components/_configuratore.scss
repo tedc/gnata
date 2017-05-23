@@ -1,0 +1,100 @@
+.configuratore{
+    @include container(100%);
+    width: 100%!important;
+    max-width: 100%!important;
+    height: 100%!important;
+    background-color: #fff;
+    padding: rem(10);
+    vertical-align: top;
+    margin: 0!important;
+
+    @include breakpoint($medium){
+        @include container(1286px);
+        padding: rem(20);
+    }
+
+    &__header{
+        @include container(1286px);
+        padding-bottom: rem(60);
+
+        @include breakpoint($medium){
+            padding-bottom: rem(150);
+        }
+    }
+
+    &__logo{
+        @include span(3 of 12 0 after);
+        display: none;
+        height: 37px;
+        background: url('../images/gnata-logo.svg') 0 0 no-repeat;
+        background-size: 107px 37px;
+
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
+            display: block;
+        }
+    }
+
+    &__step{
+        @include span(8 of 12 0 after);
+        text-align: left;
+
+        @include breakpoint($medium){
+            @include span(6 of 12 0 after);
+            text-align: center;
+        }
+
+        .steptxt{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .stepone, .steptwo{
+            display: inline-block;
+            width: 40px;
+            height: 4px;
+            background-color: #e7e8e9;
+            vertical-align: middle;
+            margin-left: 0.4em;
+            transition: background 0.3s ease-in-out;
+
+            &.stepped{
+                background-color: $blu;
+            }
+        }
+    }
+
+    &__close{
+        @include span(3 of 12 0 after last);
+        text-align: right; 
+
+        span{
+            font-size: rem(16);
+            color: $body-font;
+            text-transform: uppercase;
+            font-weight: 200;
+            cursor: pointer;
+            position: relative;
+            padding-left: rem(30);
+
+            &:before, &:after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 1px;
+                width: 20px;
+                background-color: $blu;
+                transform: rotate(45deg) translateY(-50%);
+            }
+
+            &:after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    form{
+        @include container(1200px);
+    }
+}

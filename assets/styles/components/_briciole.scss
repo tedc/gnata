@@ -1,0 +1,32 @@
+.briciole__container{
+    position: fixed;
+    transform: rotate(90deg) translateY(683px);
+    transform-origin: left top 0;
+    position: fixed;
+    text-align: right;
+    left: 50%;
+    top: 190px;
+    direction: rtl;
+}
+
+.briciole{
+    list-style: none;
+
+    li{
+        display: inline-block;
+        font-size: rem(11);
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: $font-color;
+        letter-spacing: 0.04px;
+        
+        @include breakpoint($medium){
+            transform: scale(-1, -1);
+        }
+
+        a{
+            color: $blu;
+            text-decoration: none;
+        }
+    }
+}

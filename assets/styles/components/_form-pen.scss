@@ -1,0 +1,232 @@
+.main-form{
+    @include container(1286px);
+    padding: 0 rem(40) rem(60);
+
+    @include breakpoint($medium){
+        padding-bottom: rem(150);
+    }
+}
+
+form {
+  font-family: $body-font;
+  font-weight: 200;
+  font-size: rem(24);
+  line-height: 1.4;
+  color:#939598;
+  text-align: left;
+  
+  > *{
+    transition: all 0.3s ease-in-out;
+  }
+
+  @include breakpoint($medium){
+      font-size: rem(45);
+      line-height: rem(65);
+  }
+
+  .input-container {
+    color:$blu;
+    padding:6px;
+    line-height: 1.4;
+    margin-left:-6px;
+    margin-right:-6px;
+    display:inline-block;
+    position:relative;
+
+
+    
+    &.no-overflow {
+      max-width:100%;
+      border-bottom:1px solid #e7e8e9;
+      .input {
+        max-width:100%;
+        input {
+          max-width:100%;
+        }
+      }
+    }
+    &.buru, &.filled{
+        border-bottom: none;
+        
+        .placeholder{
+            color: $blu;
+        }
+    }
+    &:hover {
+    //   border-bottom:1px dashed #004f4a;
+    //   color:#004f4a;
+    //   cursor:pointer;
+    }
+    &.active {
+      z-index:5000;
+      border-bottom:1px dashed #004f4a;
+      border-bottom:1px solid $blu;
+      color: $blu;
+      cursor:default;
+      &:before {
+        content:'';
+        display:block;
+        background-color: rgba(#fff, 0.9);
+        position:fixed;
+        z-index:0;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+      }
+      .input {
+        visibility:visible;
+        opacity:1;
+      }
+
+      .newSelect{
+        opacity: 1;
+      }
+    }
+    .newSelect{
+        display: block;
+        width: auto;
+        position: fixed;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+    }
+    .newOption {
+      padding:6px 46px 6px 6px;
+      background:white;
+      position:relative;
+      &:hover {
+        // background:#ff202f;
+        // color:white;
+        &:after {
+          color:white !important;
+        }
+      }
+    }
+    .placeholder {
+      position:relative;
+      z-index:1;
+      color: #e7e8e9;
+      transition: color 0.3s ease-in-out;
+
+      &:hover{
+        color: $blu;
+      }
+    }
+    .input {
+      display:block;
+      visibility:hidden;
+      position:absolute;
+      z-index:2;
+      top:0;
+      left:0;
+      opacity:0;
+    }
+  }
+  .newOptions{
+    cursor: pointer;
+  }
+  input,select {
+    &[type="text"], &[type="tel"], &[type="email"]{
+        font-family: $body-font;
+        font-size: rem(24);
+        line-height: 1.4;
+        font-weight: 200;
+        border:none;
+        outline:none;
+        margin:0;
+        padding:5px;
+        display:block;
+        color: $blu;
+
+        @include breakpoint($medium){
+            font-size: rem(45);
+            line-height: rem(65);
+        }
+    }
+    &.hidden {
+      position:absolute;
+      left:-5000px;
+    }
+  }
+
+  .formdivider{
+      width: 100%;
+      clear: both;
+      margin-top: rem(60);
+
+      @include breakpoint($medium){
+          margin-top: rem(150);
+      }
+  }
+}
+
+.cf7mls_next.action-button,
+.cf7mls_back.action-button {
+    @extend .pulsante;
+    font-size: rem(16);
+    color: $blu;
+    text-transform: uppercase;
+    background: transparent;
+    float: right;
+
+    &:hover{
+        color: #fff;
+    }
+}
+
+input[type="submit"]{
+  @extend .cf7mls_next.action-button;
+  -webkit-appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  float: right!important;
+}
+
+.cf7mls_back.action-button{
+  display: block!important;
+  margin: rem(20) auto 0!important;
+  float: left;
+
+    @include breakpoint(1195px){
+      float: left;
+      display: inline-block;
+      margin: 0!important;
+    }
+}
+
+span.wpcf7-not-valid-tip{
+  display: none;
+}
+
+.legal{
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  top: auto;
+  bottom: 0;
+  width: 70%;
+  float: left;
+
+  @include breakpoint(855px){
+      bottom: 0;
+      padding-top: rem(20);
+  }
+}
+
+div.wpcf7 span.ajax-loader{
+  display: none;
+}
+
+.form-footer{
+  @include clearfix;
+  width: 100%;
+  float: right;
+
+  @include breakpoint(1194px){
+      width: 82%;
+  }
+}

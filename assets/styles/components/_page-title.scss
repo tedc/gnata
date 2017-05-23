@@ -1,0 +1,40 @@
+.page-title{
+    @include container(1286px);
+    padding: 0 rem(40);
+
+    @include breakpoint($medium){
+        padding: rem(125) 0;   
+    }
+
+    &__title{
+        font-family: $header-font;
+        font-size: rem(80);
+        line-height: rem(72);
+        font-weight: 700;
+        letter-spacing: 0.04px;
+        color: $blu;
+        padding: 0.2em 0;
+
+        @include breakpoint($medium){
+            @include span(6 of 12 after);
+            padding: 0 rem(40);
+        }
+    }
+
+    &__intro{
+
+        @include breakpoint($medium){
+            @include span(6 of 12 after last);
+            padding: 0 rem(40);
+        }
+
+        p{
+            font-size: rem(22);
+            line-height: rem(33);
+            color: $font-color;
+            letter-spacing: 0.04px;
+            font-weight: 200;
+            padding-bottom: rem(40);
+        }
+    }
+}

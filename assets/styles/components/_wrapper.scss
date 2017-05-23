@@ -1,0 +1,23 @@
+.wrapper{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    background-color: $grey;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+
+    body.page-template-template-macchina &{
+        background-color: #fff;
+    }
+}
+
+.inner-wrapper{
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    
+    @include breakpoint($medium){
+        @include clearfix;
+        padding-top: rem(70);
+    }
+}

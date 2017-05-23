@@ -1,0 +1,179 @@
+.header{
+    width: 100%;
+    background-color: $grey;
+    padding: rem(12) rem(40);
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    top: 0;
+    display: none;
+
+    @include breakpoint($medium){
+        display: block;
+    }
+
+    @include breakpoint(1366px){
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--home{
+        background-color: transparent;
+    }
+
+    &--fissato{
+        position: fixed;
+    }
+}
+
+
+.header__container{
+    @include breakpoint($medium){
+        @include container(1286px);
+    }
+}
+
+.header__logo-container{
+    @include span(2 of 12 0 after);
+}
+
+.header__logo{
+    width: 122px;
+    height: auto;
+    text-indent: -9999px;
+
+    a{
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        svg{
+            display: block;
+            width: 122px;
+            height: auto;
+        }
+
+        .header__logo-home{
+            
+            .cls-1{
+                fill: #fff;
+            }
+
+            &--blu{
+                .cls-1{
+                    fill: $blu;
+                }
+            }
+        }
+    }
+}
+
+.header__nav{
+    @include span(10 of 12 0 after);
+
+    ul{
+        font-size: rem(11);
+        padding-top: rem(16);
+        float: right;
+        li{
+            display: inline-block;
+            margin-right: rem(30);
+
+            &.current-menu-item{
+                a{
+                    color: $blu;
+                }
+            }
+
+            &:last-child{
+                margin-right: 0;
+                border-left: 1px solid #e6e7e8;
+                padding-left: rem(30);
+            }
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $font-color;
+                transition: color 0.3s ease-in-out;
+
+                &:hover{
+                    color: $blu;
+                }
+
+                .header--home &{
+                    color: #fff;
+
+                    &:hover{
+                        color: $blu;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.js #header-navigation {
+		display:none;
+	}
+	
+.js .slicknav_menu {
+    display:block;
+}
+
+.slicknav_menu {
+    background: $grey--dark;
+    padding: 0 rem(40);
+	
+    @include breakpoint($medium){
+        display:none;
+    }
+
+    .slicknav_menutxt{
+        display: none;
+    }
+
+    .slicknav_btn{
+        background-color: transparent;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .slicknav_icon-bar{
+        background-color: $blu;
+        width: 22px;
+        height: 3px;
+    }
+
+    .slicknav_brand{
+        margin: 0;
+        padding: 0;
+        width: 80px;
+        padding-top: rem(12);
+
+        &:before{
+            content: url('../images/gnata-logo.svg');
+        }
+    }
+}
+
+.slicknav_nav{
+    ul{
+        font-size: rem(14);
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        li{
+            a{
+                color: $font-color;
+                margin-left: 0;
+                padding-left: 0;
+
+                &:hover{
+                    background: transparent;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,294 @@
+.macchina{
+    @include container(1286px);
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+
+    &__desc{
+        width: 100%;
+        float: none;
+        padding: 0 rem(40);
+        z-index: 1;
+        background-color: #fff;
+        
+        @include breakpoint($medium){
+            width: 43%;
+            float: left;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &--closed{
+            transform: translateX(-100%);
+        }
+    }
+
+    // Contenuto testo della macchina
+    &__content{
+
+        @include breakpoint($medium){
+            width: 100%;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            padding: rem(120) rem(40) 0;
+            z-index: 0;
+        }
+
+        h1{
+            font-size: rem(80);
+            line-height: 1.4;
+            letter-spacing: 0.04px;
+            color: $blu;
+            font-family: $header-font;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        h2{
+            font-size: rem(22);
+            line-height: rem(30);
+            color: $blu;
+            font-family: $body-font;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            padding-top: rem(30);
+            padding-bottom: rem(15);
+
+            @include breakpoint($medium){
+                padding-top: rem(70);
+            }
+
+            &:after{
+                content: '';
+                height: 1px;
+                width: 20%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $grey--dark;
+            }
+        }
+
+        p{
+            font-size: rem(16);
+            line-height: rem(28);
+            font-weight: 200;
+            margin-bottom: rem(15);
+        }
+
+        span{
+            font-size: rem(16);
+            line-height: rem(28);
+            text-transform: uppercase;
+            color: $font-color;
+            font-weight: 200;
+        }
+
+        ul{
+            font-size: rem(16);
+            line-height: rem(28);
+            padding-top: rem(12);
+            font-weight: 200;
+
+            li{
+                position: relative;
+                padding: 0 0 0 rem(15);
+                margin-bottom: rem(6);
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $blu;
+                    border-radius: 100%;
+                    top: rem(12);
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__visual{
+        width: 100%;
+        height: 400px;
+        position: relative;
+        margin-bottom: 2em;
+        
+        @include breakpoint($medium){
+            width: 100%;
+            position: absolute;
+            top: rem(120);
+            left: 50%;
+            transform: translateX(-50%);
+            height: auto;
+            z-index: 1;
+            max-height: calc(100vh);
+            float: right;
+            // transition: all 0.3s ease-in-out;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__container-visual{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__zoomwrapper{
+        top: 340px;
+        right: 0;
+        position: absolute;
+        @include breakpoint($medium){
+            width: 60px;
+            height: 140px;
+            // border: 1px solid red;
+            position: absolute;
+            z-index: 9999;
+            margin-top: 700px;
+            transform: translateY(-50px);
+            top: auto;
+            right: rem(40);
+        }
+
+        @include breakpoint(1300px){
+            transform: translate(1226px, -50px);
+            top: auto;
+            right: auto;
+        }
+    }
+
+    &__zoomplus{
+        width: 40px;
+        height: 40px;
+        background-color: $blu;
+        position: absolute;
+        right: 40px;
+        bottom: 80px;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10);
+
+        @include breakpoint($medium){
+            width: 60px;
+            height: 60px;
+            top: 0;
+            bottom: 320px;
+            right: 0;
+        }
+
+        &:focus{
+            outline: none;        
+        }
+
+        svg{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            fill: #fff;
+            width: 19px;
+            height: 19px;
+            transform: translate(-50%, -50%);
+        }  
+    }
+
+    &__zoomminus{
+        width: 40px;
+        height: 40px;
+        background-color: $blu;
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10);
+
+        @include breakpoint($medium){
+            width: 60px;
+            height: 60px;
+            bottom: 0;
+            right: 0;
+        }
+        
+        &:focus{
+            outline: none;        
+        }
+
+        svg{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            fill: #fff;
+            width: 19px;
+            height: 19px;
+            transform: translate(-50%, -50%);
+        }  
+    }
+
+    &__wrapper-riduttore{
+        display: none;
+        transition: transform 0.3s ease-in-out;
+
+        @include breakpoint($medium){
+            display: block;
+            width: 40px;
+            height: 140px;
+            position: absolute;
+            // border: 1px solid red;
+            z-index: 999;
+            margin-top: 700px;
+            left: 43%;
+            transform: translate(-50%, -50px);
+        }
+
+        @include breakpoint(1300px){
+            transform: translate(532px, -50px);
+            left: auto;
+        }
+
+        &.is-sliding{
+            transform: translate(0, -50px)
+        }
+    }
+
+    &__riduttore{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        background-color: $blu;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    &__arrow{
+        width: rem(13);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+
+        .macchina__riduttore--triggered &{
+            transform: scale(-1, 1) translate(-50%, -50%);
+            transform-origin: bottom left;
+        }
+        
+        .cls-1{
+            fill: #fff;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+.video-hero{
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: url('../images/gnata-header.jpg') center center no-repeat;
+    background-size: cover;
+
+    @include breakpoint($medium){
+        padding-top: rem(70);
+        height: 710px;
+        background: none;
+    }
+
+    &__video{
+        display: none;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @include breakpoint($medium){
+            display: block;
+        }
+    }
+
+    &__payoff{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        padding: 0 rem(40);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .cls-1{
+            fill: #fff;
+        }
+
+        @include breakpoint($large){
+            width: 892px;
+            padding: 0;
+        }
+    }
+
+    &__button{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__playcontainer{
+        width: 45px;
+        height: 45px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: relative;
+        float: left;
+        transition: all 0.3s ease-in-out;
+
+        .video-hero__button:hover &{
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    &__play{
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 18px solid #fff;
+        position: absolute;
+        top: 13px;
+        left: 15px;
+    }
+
+    &__playtext{
+        display: block;
+        float: left;
+        font-size: rem(22);
+        line-height: rem(40);
+        font-weight: 100;
+        color: #fff;
+        text-transform: uppercase;
+        padding-left: rem(20);
+
+        .video-hero__button:hover &{
+            color: lighten(#fff, 60%);
+        }
+    }
+}
+
+.video{
+    
+    &__container{
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        
+        video{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__controls{
+        position: absolute;
+        bottom: 15px;
+        left: rem(40);
+        
+        .playbutton{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: url('../images/play.svg') 0 0 no-repeat;
+            cursor: pointer;
+        }
+
+        .stopbutton{
+            width: 16px;
+            height: 16px;
+            margin-left: rem(15);
+            display: inline-block;
+            background: url('../images/pause.svg') 0 0 no-repeat;
+            cursor: pointer;
+        }
+
+        .thevolume{
+
+            display: inline-block;
+            margin-left: rem(15);
+            span{
+                display: inline-block;
+                width: 3px;
+                height: 16px;
+                background-color: #939598;
+                border-radius: 1px;
+                cursor: pointer;
+
+                &.basso{
+                    height: 5px;
+                }
+
+                &.medio{
+                    height: 10px;
+                }
+
+                &.alto{
+                    height: 16px;
+                }
+
+                &.is-selected{
+                    background-color: $blu;
+                }
+            }
+        }
+    }
+
+    &__close{
+        text-align: right;
+
+        span{
+            display: block;
+            font-size: rem(14);
+            font-weight: 700;
+            line-height: 1;
+            color: $blu;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            padding-bottom: rem(15);
+        }
+    }
+}
+
+.progressBar{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 29px;
+    left: 5px;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.timeBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: $blu;
+}

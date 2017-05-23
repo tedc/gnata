@@ -1,0 +1,59 @@
+.footer{
+    background-color: $blu;
+    z-index: -2;
+    position: relative;
+    min-height: rem(304);
+
+    &__content{
+        width: 100%;
+        max-width: 1286px;
+        padding: 0 rem(40);
+        position: fixed;
+        left:50%;
+        bottom:0;
+        transform: translateX(-50%);
+        padding-bottom: rem(110);
+        z-index: -1;
+    }
+
+    &__logo{
+        fill: #fff;
+        width: 146px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: rem(38);
+
+        .cls-1{
+            fill: #fff;
+        }
+    }
+
+    &__indirizzo{
+        font-size: rem(11);
+        line-height: rem(15);
+        letter-spacing: 0.06;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__credits-link{
+        display: block;
+        width: 63px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__credits{
+        width: 63px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-top: rem(39);
+    }
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+}

@@ -1,0 +1,54 @@
+.calltoaction{
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    z-index: 999;
+    background-color: #fff;
+    top: calc(100% + 60px);
+    left: 0;
+    z-index: 9999;
+    transition: top 0.3s ease-in-out;
+
+    @include breakpoint($medium){
+        height: 70px;
+        top: calc(100% + 70px);
+    }
+
+    &.is-visible{
+        top: calc(100% - 60px);
+
+        @include breakpoint($medium){
+            top: calc(100% - 70px);
+        }
+    }
+
+    &__header{
+        background-image: url('../images/configuratore.jpg');
+        background-position: center center;
+        background-size: cover;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: rem(16);
+
+        a{
+            font-family: $body-font;
+            font-size: rem(22);
+            line-height: rem(33);
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            vertical-align: middle;
+            letter-spacing: 0.10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}

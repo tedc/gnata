@@ -1,0 +1,181 @@
+.lanews{
+    @include container(1286px);
+    padding: rem(40);
+
+    @include breakpoint($medium){
+        padding: rem(200) rem(40) 0;
+    }
+
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: 200;
+    letter-spacing: 0.04px;
+    color: $font-color;
+
+    &__date{
+        font-size: rem(16);
+        display: block;
+        letter-spacing: 0.08px;
+        padding-bottom: rem(30);
+    }
+
+    h1{
+        font-family: $header-font;
+        color: $blu;
+        font-size: rem(50);
+        line-height: rem(45);
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: rem(70);
+    }
+
+    h2{
+        font-size: rem(22);
+        line-height: rem(33);
+        font-weight: 200;
+        letter-spacing: 0.04px;
+        margin-bottom: 0.2em;
+    }
+
+    ul:not(.slick-dots){
+        font-size: rem(16);
+        line-height: rem(28);
+        padding-top: rem(12);
+        font-weight: 200;
+
+        li{
+            position: relative;
+            padding: 0 0 0 rem(15);
+            margin-bottom: rem(6);
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $blu;
+                border-radius: 100%;
+                top: rem(12);
+                left: 0;
+            }
+        }
+    }
+
+    &__sidebar{
+        padding-bottom: 1em;
+        @include breakpoint($medium){
+            @include span(3 of 12 0 first);
+            padding-right: rem(60);
+            padding-bottom: 0;
+            position: relative;
+        }
+
+        img{
+            border: 1px solid $grey--dark;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__article{
+        margin-bottom: rem(80);
+        @include breakpoint($medium){
+            @include span(9 of 12 0 last);
+            margin-bottom: rem(170);
+        }
+    }
+
+    &__gallery{
+        margin: rem(80) 0 rem(100) 0!important;
+    }
+}
+
+.othernews{
+    @include container(1286px);
+    padding: 0 rem(40) rem(50);
+
+    @include breakpoint($medium){
+        padding-bottom: rem(150);
+    }
+
+    &__sidebar{
+        
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
+        }
+
+        span{
+            font-size: rem(22);
+            line-height: rem(45);
+            font-weight: 700;
+            letter-spacing: 0.04px;
+            text-transform: uppercase;
+            color: $blu;
+        }
+    }
+
+    &__list{
+        
+        @include breakpoint($medium){
+            @include span(9 of 12 0 after);
+        }
+    }
+    &__article{
+        @include container(100%);
+        position: relative;
+        border: 1px solid $grey--dark;
+        background-color: #fff;
+
+        @include breakpoint($medium){
+            padding: rem(35) 0;
+        }
+    }
+
+    &__img{
+        @include span(2 of 12 0 after);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-right: 1px solid $grey--dark;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
+        }
+    }
+
+    &__content{
+        @include span(10 of 12 0 after last);
+        letter-spacing: 0.04px;
+        padding: rem(10);
+
+        @include breakpoint($medium){
+            @include span(9 of 12 0 after last);
+            padding: 0 rem(40);
+        }
+
+        span{
+            display: block;
+            color: $font-color;
+            font-size: rem(18);
+            line-height: rem(25);
+            margin-bottom: 0.2em;
+            
+            @include breakpoint($medium){
+                margin-bottom: 1em;
+            }
+        }
+
+        h3, h3 > a{
+            font-family: $body-font;
+            text-transform: uppercase;
+            color: $blu;
+            font-size: rem(24);
+            line-height: 1;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "vendor": [
+        "bower_components/jquery-accordion/js/jquery.accordion.js",
+        "bower_components/sticky-kit/jquery.sticky-kit.js",
+        "bower_components/jquery.panzoom/dist/jquery.panzoom.js",
+        "bower_components/matchHeight/dist/jquery.matchHeight.js",
+        "bower_components/mediaCheck/js/mediaCheck.js",
+        "bower_components/remodal/dist/remodal.js",
+        "bower_components/slick-carousel/slick/slick.js",
+        "bower_components/slicknav/dist/jquery.slicknav.js",
+        "bower_components/svg-injector/svg-injector.js",
+        "bower_components/waypoints/lib/jquery.waypoints.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "http://gnata.dev"
+  }
+}

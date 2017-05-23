@@ -1,0 +1,66 @@
+.paragrafo{
+    @include container(1286px);
+    font-size: rem(22);
+    line-height: rem(33);
+    font-weight: 200;
+    letter-spacing: 0.04px;
+    color: $font-color;
+    padding: rem(60) rem(40);
+
+    @include breakpoint($medium){
+        padding: rem(125) rem(120);
+    }
+
+    h2{
+        font-family: $header-font;
+        color: $blu;
+        font-size: rem(80);
+        line-height: rem(72);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    h3{
+        font-family: $header-font;
+        font-size: rem(55);
+        line-height: rem(50);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.04px;
+        color: $blu;
+    }
+
+    h4{
+        font-size: rem(30);
+        line-height: rem(45);
+        font-weight: 300;
+        letter-spacing: 0.04px;
+        margin-bottom: rem(30);
+
+        @include breakpoint($medium){
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+
+        &.is-visible{
+
+            @include breakpoint($medium){
+                opacity: 1;
+            }
+        }
+    }
+
+    p{
+        @include breakpoint($medium){
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        &.is-visible{
+
+            @include breakpoint($medium){
+                opacity: 1;
+            }
+        }
+    }
+}
