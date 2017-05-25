@@ -31,3 +31,33 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+add_action( 'wp_print_styles',  __NAMESPACE__ . '\\aa_deregister_styles', 100 );
+function aa_deregister_styles() {
+    wp_deregister_style( 'contact-form-7' );
+}
+
+
+if ( !function_exists( 'acf_get_language_default' ) )
+{
+    function acf_get_language_default()
+    {
+        return acf_get_setting( 'default_language' );
+    }
+}
+
+if ( !function_exists( 'acf_set_language_to_default' ) )
+{
+    function acf_set_language_to_default()
+    {
+        add_filter( 'acf/settings/current_language', __NAMESPACE__ . '\\acf_get_language_default', 100 );
+    }
+}
+
+if ( !function_exists( 'acf_unset_language_to_default' ) )
+{
+    function acf_unset_language_to_default()
+    {
+        remove_filter( 'acf/settings/current_language', __NAMESPACE__ . '\\acf_get_language_default', 100 );
+    }
+}

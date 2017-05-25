@@ -57,37 +57,37 @@
               }
 
             //   Aggiungi classe ai paragrafi nella lista marcatrici
-              $('.lista-marcatrici__paragrafo').each(function () {
+              // $('.lista-marcatrici__paragrafo').each(function () {
 
-                  var self = $(this);
-                  $(this).waypoint({
-                      handler: function () {
-                          self.addClass('active');
-                      }, offset: '200px'
-                  });
-              })
+              //     var self = $(this);
+              //     $(this).waypoint({
+              //         handler: function () {
+              //             self.addClass('active');
+              //         }, offset: '200px'
+              //     });
+              // })
 
-              //   Aggiungi classe ai paragrafi di testo
-              $('.paragrafo h4').each(function () {
+             //   Aggiungi classe ai paragrafi di testo
+              // $('.paragrafo h4').each(function () {
 
-                  var self = $(this);
-                  $(this).waypoint({
-                      handler: function () {
-                          self.addClass('is-visible');
-                      }, offset: '450px'
-                  });
-              })
+              //     var self = $(this);
+              //     $(this).waypoint({
+              //         handler: function () {
+              //             self.addClass('is-visible');
+              //         }, offset: '450px'
+              //     });
+              // })
 
-              //   Aggiungi classe ai paragrafi di testo
-              $('.paragrafo p').each(function () {
+              // //   Aggiungi classe ai paragrafi di testo
+              // $('.paragrafo p').each(function () {
 
-                  var self = $(this);
-                  $(this).waypoint({
-                      handler: function () {
-                          self.addClass('is-visible');
-                      }, offset: '450px'
-                  });
-              });
+              //     var self = $(this);
+              //     $(this).waypoint({
+              //         handler: function () {
+              //             self.addClass('is-visible');
+              //         }, offset: '450px'
+              //     });
+              // });
 
             //   Fai comparire la call to action
             $(window).scroll(function() {    
@@ -140,19 +140,30 @@
               var targetInput = $(this).find('input');
               var targetSelect = $(this).find('select');
               var styledSelect = $(this).find('.newSelect');
+              var baseText = target.find('.placeholder').text();
+              if($(this).find('.input:first').hasClass('selectbox')) {
+                $('.inner-wrapper, .calltoaction').toggleClass('overflow');
+              }
               target.toggleClass('active');
               targetInput.focus();
               targetInput.change(function() {
-                var inputValue = $(this).val();
+                var inputValue = ($(this).val().trim()!='') ? $(this).val() : baseText;
                 var placeholder = target.find('.placeholder')
                 target.removeClass('active');
                 placeholder.html(inputValue);
-                if(inputValue!='') {
+                if(inputValue!=baseText) {
                   target.addClass('filled');
+                  target.removeClass('error');
                 } else {
                   target.removeClass('filled');
+                  $(this).removeAttr('value');
                 }
               });
+              $('input, textarea').each(function() {
+                $(this).on('click', function(e) {
+                  e.stopPropagation();
+                })
+              })
               // targetSelect.change(function() {
               //   var inputValue = $(this).val();
               //   var placeholder = target.find('.placeholder')
@@ -185,6 +196,8 @@
                 target.append('<div class="newOption" data-value="' + optionValue + '" data-input="'+name+'">' + optionContents + '</div>')
               });
             });
+
+            $('.selectbox').perfectScrollbar();
             // new select functionality
             var newSelect = $('.newSelect');
             var newOption = $('.newOption');
@@ -214,8 +227,18 @@
             //   var target = $(this);
             //   target.parent().find('select').change();
             // });
-
-
+            $('.wpcf7').on('wpcf7invalid', function() {
+              $('.input-container').each(function() {
+              if($(this).find('.wpcf7-not-valid').length > 0) {
+                $(this).addClass('error')
+              } else {
+                $(this).removeClass('error')
+              }
+              if($(this).find('.wpcf7-not-valid').val()=='') {
+                $(this).removeAttr('value');
+              }
+            })
+            });
         });
 
       },

@@ -1,0 +1,60 @@
+<h2 class="form-title">Contatti</h2>
+
+Sono
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [text* contact_nome placeholder "Nome e Cognome"]
+    </span>
+    <span class="placeholder">Nome e Cognome</span>
+ </span>
+dell'Azienda
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [text* contact_company placeholder "Nome Azienda"]
+    </span>
+    <span class="placeholder">Nome Azienda</span>
+ </span>. <br>
+Ho bisogno di [text* richiesta class:hidden]
+<span class="input-container">
+  <span class="placeholder select-placeholder">Richiesta</span>
+  <span class="input selectbox">
+    [select richiesta-select class:fancy-select class:hidden value "" "Richiedere un preventivo" "Assistenza tecnica" "Informazioni"]
+  </span>
+  <span class="input-container__close">
+    <span>Chiudi</span>
+  </span>
+</span>
+
+[group preventivo]
+per la macchina <span class="input-container no-overflow">
+<span class="placeholder">modello</span><span class="input text">[text contact_modello placeholder "modello"]</span></span>. <br>
+Ricontattatemi alla mail <span class="input-container no-overflow"><span class="placeholder">indirizzo mail</span><span class="input text">[email* contact_email placeholder "indirizzo mail*"]</span></span> o al numero di telefono <span class="input-container no-overflow"><span class="placeholder">numero di telefono*</span><span class="input text">[tel* cntact_tel placeholder "numero di telefono"]</span></span>. <br>
+<span class="input-container no-overflow">
+<span class="placeholder">Note</span>
+<span class="input text">[textarea* contact_note placeholder "Note"]</span></span>
+[/group]
+[group assistenza]
+per la macchina <span class="input-container no-overflow">
+<span class="placeholder">modello</span><span class="input text">[text contact_modello placeholder "modello"]</span></span>. <br>
+Ricontattatemi alla mail <span class="input-container no-overflow"><span class="placeholder">indirizzo mail</span><span class="input text">[email* contact_email placeholder "indirizzo mail*"]</span></span> o al numero di telefono <span class="input-container no-overflow"><span class="placeholder">numero di telefono*</span><span class="input text">[tel* cntact_tel placeholder "numero di telefono"]</span></span>. <br>
+<span class="input-container no-overflow">
+<span class="placeholder">Note</span>
+<span class="input text">[textarea* contact_note placeholder "Note"]</span></span>
+[/group]
+[group info]
+<br>Ricontattatemi alla mail <span class="input-container no-overflow"><span class="placeholder">indirizzo mail</span><span class="input text">[email* contact_email placeholder "indirizzo mail*"]</span></span> o al numero di telefono <span class="input-container no-overflow"><span class="placeholder">numero di telefono*</span><span class="input text">[tel* cntact_tel placeholder "numero di telefono"]</span></span>. <br>
+<span class="input-container no-overflow">
+<span class="placeholder">Messaggio</span>
+<span class="input text">[textarea* contact_note placeholder "Messaggio"]</span></span>
+[/group]
+<div class="form-separator"></div>
+<div class="form-footer form-footer--full">
+    <div class="legal">
+        <span>Inviando questo form acconsento al trattamento dei dati personali ai sensi del D. Lgs. 196/03. </span>
+    </div>
+    <div class="formbutton-container">
+        [submit "Invia"]
+    </div>
+</div>

@@ -43,14 +43,14 @@
             width: 55%;
             padding: rem(80);
             text-align: left;
-            transform: translateX(-100%);
-            opacity: 0;
-            transition: transform 0.5s ease-out,
-                        opacity 0.3s ease-out;
+            // transform: translateX(-100%);
+            // opacity: 0;
+            // transition: transform 0.5s ease-out,
+            //             opacity 0.3s ease-out;
 
             .lista-marcatrici__marcatrice:nth-child(even) &{
                 float: right;
-                transform: translateX(100%);
+                //transform: translateX(100%);
             }
         }
 

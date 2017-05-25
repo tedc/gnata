@@ -2,6 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/plugins/jquery-data.scrollmagic.js",
         "scripts/main.js"
       ],
       "vendor": [
@@ -14,7 +15,11 @@
         "bower_components/slick-carousel/slick/slick.js",
         "bower_components/slicknav/dist/jquery.slicknav.js",
         "bower_components/svg-injector/svg-injector.js",
-        "bower_components/waypoints/lib/jquery.waypoints.js"
+        "bower_components/waypoints/lib/jquery.waypoints.js",
+        "bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js",
+        "bower_components/gsap/src/uncompressed/TweenMax.js",
+        "bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+        "bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
       ],
       "main": true
     },
@@ -34,6 +39,6 @@
     }
   },
   "config": {
-    "devUrl": "http://gnata.dev"
+    "devUrl": "http://gnata.local"
   }
 }

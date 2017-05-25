@@ -28,12 +28,12 @@
 
     <section class="lista-marcatrici">
 
-      <?php while( have_rows('marcatrici_list_marcatrice') ) : the_row(); ?>
+      <?php $marcatrice = 0; while( have_rows('marcatrici_list_marcatrice') ) : the_row(); ?>
 
       <?php $bg = get_sub_field('marcatrice_bg'); ?>
 
-      <div class="lista-marcatrici__marcatrice" style="background-image: url('<?php echo $bg;?>')">
-        <div class="lista-marcatrici__paragrafo">
+      <div class="lista-marcatrici__marcatrice" style="background-image: url('<?php echo $bg;?>')" id="marcatrice_<?php echo $marcatrice; ?>" data-scrollmagic='{"tween":{"backgroundPosition":"<?php echo ($marcatrice%2==0) ? 100 : 0; ?>% 35%"},"duration":"250vh","triggerHook":1}'>
+        <div class="lista-marcatrici__paragrafo" data-scrollmagic='{"tween":[{"y":400},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":"#marcatrice_<?php echo $marcatrice; ?>"}'>
           <?php if ( get_sub_field('marcatrice_title') ) : ?>
           <h2>
             <?php echo get_sub_field('marcatrice_title'); ?>
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <?php endwhile; ?>
+      <?php $marcatrice++; endwhile; ?>
 
     </section>
 

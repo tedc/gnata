@@ -1,0 +1,84 @@
+<h2 class="form-title">Supporto e materiale</h2>
+Devo marcare
+[text* config_marcare class:hidden]
+<span class="input-container">
+    <span class="placeholder select-placeholder">oggetto da marcare</span>
+    <span class="input selectbox">
+      [select config_marcare-select class:fancy-select class:hidden "tubi" "cavi" "condotte idrauliche" "manti" "fibre ottiche" "oggetti" "profili"]
+    </span>
+    <span class="input-container__close">
+    <span>Chiudi</span>
+  </span>
+ </span>
+
+in
+[text* config_materiale class:hidden]
+<span class="input-container">
+    <span class="placeholder select-placeholder">oggetto da marcare</span>
+    <span class="input selectbox">
+      [select config_materiale-select class:fancy-select class:hidden "PE" "XLPE" "MDLPE" "LLDPE" "LMDPE" "HDPE" "PVC" "PP" "CA"]
+    </span>
+    <span class="input-container__close">
+    <span>Chiudi</span>
+  </span>
+ </span>
+
+per il settore
+[text* config_settore class:hidden]
+<span class="input-container">
+    <span class="placeholder select-placeholder">settore</span>
+    <span class="input selectbox">
+      [select config_settore-select class:fancy-select class:hidden "acqua" "gas" "elettricità" "coperture" "fibre" "ottiche" "irrigazione" "condotte" "idrauliche" "edilizia" "infrastrutture" "giardino" "coltivazioni agricole" "oggetti in materia plastica"]
+    </span>
+    <span class="input-container__close">
+    <span>Chiudi</span>
+  </span>
+ </span>
+
+<div class="formdivider"></div>
+
+[cf7mls_step config-2]
+<h2 class="form-title">Contatti</h2>
+
+Sono
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [text* config_nome placeholder "Nome e Cognome*"]
+    </span>
+    <span class="placeholder">Nome e Cognome*</span>
+ </span>
+
+dell'Azienda
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [text* config_company placeholder "Nome Azienda*"]
+    </span>
+    <span class="placeholder">Nome Azienda*</span>
+ </span>. <br>
+
+Ricontattatemi alla mail
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [email* config_email placeholder "Indirizzo mail*"]
+    </span>
+    <span class="placeholder">indirizzo mail*</span>
+ </span>
+
+o al numero di telefono
+
+<span class="input-container no-overflow">
+    <span class="input text">
+      [tel* config_tel placeholder "Numero di telefono*"]
+    </span>
+    <span class="placeholder">numero di telefono*</span>
+ </span>.
+
+<div class="formdivider"></div>
+
+<div class="form-footer">
+    <div class="legal">Inviando questo form acconsento al trattamento dei dati personali ai sensi del D. Lgs. 196/03. </div>
+    [submit "Invia"]
+</div>

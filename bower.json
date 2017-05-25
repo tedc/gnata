@@ -17,13 +17,13 @@
     "matchHeight": "matchheight#^0.7.2",
     "slicknav": "^1.0.10",
     "jquery-accordion": "*",
-    "scrollmagic": "^2.0.5",
-    "jquery-data-scrollmagic": "^0.1.3",
+    "scrollmagic": "~2.0.5",
     "jquery-sticky": "sticky#^1.0.4",
     "sticky-kit": "^1.1.2",
     "mediaCheck": "^0.4.6",
     "remodal": "^1.1.1",
-    "jquery-auto-grow-input": "*"
+    "jquery-auto-grow-input": "*",
+    "gsap": "~1.19.1"
   },
   "devDependencies": {
     "reset-scss": "^2.0.2",

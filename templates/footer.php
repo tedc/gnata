@@ -1,3 +1,4 @@
+<?php use Roots\Sage\Extras; ?>
 </div> <!-- Fine Wrapper -->
 
 <footer class="footer">
@@ -47,6 +48,6 @@
     </div>
   </div>
   <div class="configuratore__form">
-    <?php echo do_shortcode( '[contact-form-7 id="298" title="natural-config"]' );?>
+    <?php Extras\acf_set_language_to_default(); echo do_shortcode(get_field('configuratore_'.pll_current_language(), 'options')); Extras\acf_unset_language_to_default(); ?>
   </div>
 </div>

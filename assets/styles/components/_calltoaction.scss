@@ -8,6 +8,9 @@
     top: calc(100% + 60px);
     left: 0;
     z-index: 9999;
+    &.overflow {
+        z-index: 0;
+    }
     transition: top 0.3s ease-in-out;
 
     @include breakpoint($medium){

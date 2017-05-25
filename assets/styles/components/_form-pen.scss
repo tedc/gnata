@@ -7,6 +7,13 @@
     }
 }
 
+[data-class="wpcf7cf_group"] {
+  display: inline;
+  &.wpcf7cf-hidden {
+    display: none;
+  }
+}
+
 form {
   font-family: $body-font;
   font-weight: 200;
@@ -14,7 +21,7 @@ form {
   line-height: 1.4;
   color:#939598;
   text-align: left;
-  
+  position: relative;
   > *{
     transition: all 0.3s ease-in-out;
   }
@@ -50,25 +57,75 @@ form {
         
         .placeholder{
             color: $blu;
+            &.select-placeholder {
+              &:after {
+                opacity: 1;
+              }
+            }
         }
+    }
+    &.error {
+      border-bottom-color: #fca5b1;
+      .placeholder{
+          color: #fca5b1;
+      }
     }
     &:hover {
     //   border-bottom:1px dashed #004f4a;
     //   color:#004f4a;
     //   cursor:pointer;
     }
+    &__close {
+        text-align: right;
+        position: fixed;
+        z-index: 9999;
+        right: rem(40);
+        line-height: 1;
+        top: 0;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .5s, opacity .5s;
+        span{
+            font-size: rem(16);
+            color: $body-font;
+            text-transform: uppercase;
+            font-weight: 200;
+            cursor: pointer;
+            position: relative;
+            padding-left: rem(30);
+
+            &:before, &:after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 1px;
+                width: 20px;
+                background-color: $blu;
+                transform: rotate(45deg) translateY(-50%);
+            }
+
+            &:after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
     &.active {
       z-index:5000;
-      border-bottom:1px dashed #004f4a;
-      border-bottom:1px solid $blu;
       color: $blu;
       cursor:default;
+      border-bottom:1px solid $blu;
+      .input-container__close {
+        visibility: visible;
+        opacity: 1;
+      }
       &:before {
         content:'';
         display:block;
         background-color: rgba(#fff, 0.9);
         position:fixed;
-        z-index:0;
+        z-index:2;
         width:100%;
         height:100%;
         left:0;
@@ -85,21 +142,22 @@ form {
     }
     .newSelect{
         display: block;
-        width: auto;
-        position: fixed;
-        opacity: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // width: auto;
+        // position: fixed;
+        // opacity: 0;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         transition: all 0.3s ease-in-out;
     }
     .newOption {
       padding:6px 46px 6px 6px;
-      background:white;
       position:relative;
-      &:hover {
+      color: #939598;
+      transition: color .5s;
+      &:hover, &.selected {
         // background:#ff202f;
-        // color:white;
+        color: $blu;
         &:after {
           color:white !important;
         }
@@ -110,19 +168,55 @@ form {
       z-index:1;
       color: #e7e8e9;
       transition: color 0.3s ease-in-out;
-
+      cursor: pointer;
       &:hover{
         color: $blu;
+      }
+      &.select-placeholder{
+        padding-right: 18px;
+        margin-right: 10px;
+        &:after {
+          content: "";
+          width: 12px;
+          height: 12px;
+          border-right: 2px solid #939598;
+          border-bottom: 2px solid #939598;
+          opacity: .7;
+          transition: opacity .5s, border-color .5s;
+          position: absolute;
+          right: 0;
+          transform: rotate(45deg) translate3d(0, -50%, 0);
+          top: 50%;
+        }
+        &:hover {
+          &:after {
+            border-color: $blu;
+          }
+        }
       }
     }
     .input {
       display:block;
       visibility:hidden;
       position:absolute;
-      z-index:2;
+      z-index:3;
       top:0;
       left:0;
       opacity:0;
+      transition: visibility .5s, opacity .5s;
+      &.selectbox {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wpcf7-form-control-wrap  {
+          margin: auto;
+        }
+      }
     }
   }
   .newOptions{
@@ -140,15 +234,38 @@ form {
         padding:5px;
         display:block;
         color: $blu;
-
         @include breakpoint($medium){
             font-size: rem(45);
             line-height: rem(65);
+        }
+        &:focus {    
+          border-bottom:1px solid $blu;
         }
     }
     &.hidden {
       position:absolute;
       left:-5000px;
+    }
+  }
+
+  textarea {
+    font-family: $body-font;
+    font-size: rem(24);
+    line-height: 1.4;
+    font-weight: 200;
+    border:none;
+    outline:none;
+    margin:0;
+    padding:5px;
+    display:block;
+    height: rem(65);
+    color: $blu;
+    &:focus {    
+      border-bottom:1px solid $blu;
+    }
+    @include breakpoint($medium){
+        font-size: rem(45);
+        line-height: rem(65);
     }
   }
 
@@ -158,7 +275,7 @@ form {
       margin-top: rem(60);
 
       @include breakpoint($medium){
-          margin-top: rem(150);
+          margin-top: rem(70);
       }
   }
 }
@@ -208,11 +325,12 @@ span.wpcf7-not-valid-tip{
   position: relative;
   top: auto;
   bottom: 0;
-  width: 70%;
-  float: left;
-
+  width: 100%;
+  flex: 0 0 auto;
+  padding-bottom: rem(20);
   @include breakpoint(855px){
       bottom: 0;
+      width: 70%;
       padding-top: rem(20);
   }
 }
@@ -222,11 +340,55 @@ div.wpcf7 span.ajax-loader{
 }
 
 .form-footer{
-  @include clearfix;
-  width: 100%;
+  // @include clearfix;
+  height: auto;
+  overflow: hidden;
   float: right;
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   @include breakpoint(1194px){
       width: 82%;
+      &--full {
+        width: 100%;
+      }
   }
+}
+
+.form-title {
+  font-size: rem(20);
+  padding-bottom: rem(30);
+  color: $blu;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.screen-reader-response {
+  display: none;
+}
+
+.wpcf7-response-output {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  &.wpcf7-validation-errors {
+    color: #fca5b1;
+  }
+  &.wpcf7-mail-sent-ok {
+    color: $blu;
+  }
+}
+
+
+
+
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y, .ps-container:hover>.ps-scrollbar-y-rail>.ps-scrollbar-y{
+    background-color: $blu;
+    border-radius: 0;
 }
