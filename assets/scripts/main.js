@@ -146,6 +146,7 @@
               }
               target.toggleClass('active');
               targetInput.focus();
+              targetInput.trigger('focus');
               targetInput.change(function() {
                 var inputValue = ($(this).val().trim()!='') ? $(this).val() : baseText;
                 var placeholder = target.find('.placeholder')
