@@ -145,8 +145,11 @@
                 $('.inner-wrapper, .calltoaction').toggleClass('overflow');
               }
               target.toggleClass('active');
-              targetInput.focus();
-              targetInput.trigger('focus');
+              setTimeout(function() {
+                console.log('focus');
+                targetInput.focus();
+                targetInput.trigger('focus');
+              }, 50);
               targetInput.change(function() {
                 var inputValue = ($(this).val().trim()!='') ? $(this).val() : baseText;
                 var placeholder = target.find('.placeholder')
