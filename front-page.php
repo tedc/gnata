@@ -2,6 +2,7 @@
 <?php 
 $length = count(get_field('bottoncioni'));
 $bclass = '';
+echo $length;
 switch ($length) {
     case 1:
         $bclass = '';
