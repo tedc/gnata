@@ -2,7 +2,8 @@
     background-color: $blu;
     z-index: -2;
     position: relative;
-    min-height: rem(304);
+    //min-height: rem(304);
+    min-height: rem(180);
 
     &__content{
         width: 100%;
@@ -12,7 +13,8 @@
         left:50%;
         bottom:0;
         transform: translateX(-50%);
-        padding-bottom: rem(110);
+        //padding-bottom: rem(110);
+        padding-bottom: rem(90);
         z-index: -1;
     }
 
@@ -49,7 +51,7 @@
         height: auto;
         display: block;
         margin: 0 auto;
-        padding-top: rem(39);
+        //padding-top: rem(39);
     }
 
     a{

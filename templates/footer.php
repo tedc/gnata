@@ -5,9 +5,9 @@
   <div class="footer__content">
 
      
-    <?php if ( get_field('footer_logo', 'option') ) : ?>
+    <!-- <?php if ( get_field('footer_logo', 'option') ) : ?>
         <img class="footer__logo svg-inject" src="<?php the_field('footer_logo', 'option'); ?>" alt="Gnata Leave your mark">
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <?php if ( get_field('footer_indirizzo', 'option') ) : ?>
       <p class="footer__indirizzo">
