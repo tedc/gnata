@@ -1,12 +1,32 @@
 <!--Bottoncioni-->
-<?php if ( have_rows('bottoncioni') ) : ?>
+<?php 
+$length = count(get_field('bottoncioni'));
+$bclass = '';
+switch ($length) {
+    case 1:
+        $bclass = '';
+        break;
+    case 2:
+        $bclass = ' bottoncioni--half';
+        break;
+    case 3:
+        $bclass = ' bottoncioni--third';
+        break;
+    case 4:
+        $bclass = ' bottoncioni--fourth';
+        break;
+    default:
+        $bclass = '';
+        break;
+}
+if ( have_rows('bottoncioni') ) : ?>
     <ul class="bottoncioni-container">
     <?php while( have_rows('bottoncioni') ) : the_row(); ?>
         <?php $bottoncione_testo = get_sub_field('bottoncione_name'); ?>
         <?php $bottoncione_bg = get_sub_field('bottoncione_bg'); ?>
         <?php $bottoncione_link = get_sub_field('bottoncione_link'); ?>
         
-    <li class="bottoncione">
+    <li class="bottoncione<?php echo $bclass; ?>">
         <a href="<?php echo $bottoncione_link; ?>" style="background-image: url('<?php echo $bottoncione_bg; ?>');">
         <span><?php echo $bottoncione_testo; ?></span>
         </a>

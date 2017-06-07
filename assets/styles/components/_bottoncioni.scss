@@ -1,12 +1,16 @@
 .bottoncioni-container{
-    @include container(1366px);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .bottoncione{
     background-color: #fff;
     border: 1px solid $grey--dark;
     font-size: rem(22);
-
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
     @include breakpoint($medium){
         @include span(4 of 12 0 after);
     }
@@ -22,6 +26,12 @@
 
         @include breakpoint($medium){
             @include span(4 of 12 0 after);
+        }
+    }
+
+    &--fourth {
+        @include breakpoint($medium){
+            @include span(3 of 12 0 after);
         }
     }
 

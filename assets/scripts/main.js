@@ -43,18 +43,18 @@
             }).addClass("shift--inverted");
 
             // Conta dei bottoncioni
-            var lis = $('.bottoncione');
-              var count = $('.bottoncione').length;
+            // var lis = $('.bottoncione');
+            //   var count = $('.bottoncione').length;
 
-              switch (count)
-              {
-                  case 2:
-                      lis.addClass('bottoncione--half');
-                      break;
-                  case 3:
-                      lis.addClass('bottoncione--third');
-                      break;
-              }
+            //   switch (count)
+            //   {
+            //       case 2:
+            //           lis.addClass('bottoncione--half');
+            //           break;
+            //       case 3:
+            //           lis.addClass('bottoncione--third');
+            //           break;
+            //   }
 
             //   Aggiungi classe ai paragrafi nella lista marcatrici
               // $('.lista-marcatrici__paragrafo').each(function () {
@@ -146,7 +146,6 @@
               }
               target.toggleClass('active');
               setTimeout(function() {
-                console.log('focus');
                 targetInput.focus();
                 targetInput.trigger('focus');
               }, 50);
