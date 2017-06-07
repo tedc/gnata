@@ -87,7 +87,7 @@
         display: block;
         padding: rem(24) 0 rem(24) rem(39);
         z-index: 1;
-
+        font-weight: bold;
         @include breakpoint($medium){
             padding: rem(54) 0 rem(54) rem(39);
         }
