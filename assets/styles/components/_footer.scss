@@ -3,7 +3,7 @@
     z-index: -2;
     position: relative;
     //min-height: rem(304);
-    min-height: rem(140);
+    min-height: rem(150);
 
     &__content{
         width: 100%;
@@ -52,6 +52,7 @@
         display: block;
         margin: 0 auto;
         //padding-top: rem(39);
+        padding-top: rem(15);
     }
 
     a{
