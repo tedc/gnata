@@ -2,7 +2,6 @@
 <?php 
 $length = count(get_field('bottoncioni'));
 $bclass = '';
-echo $length;
 switch ($length) {
     case 1:
         $bclass = '';
@@ -20,6 +19,7 @@ switch ($length) {
         $bclass = '';
         break;
 }
+echo $bclass;
 if ( have_rows('bottoncioni') ) : ?>
     <ul class="bottoncioni-container">
     <?php while( have_rows('bottoncioni') ) : the_row(); ?>
