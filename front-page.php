@@ -7,19 +7,18 @@ switch ($length) {
         $bclass = '';
         break;
     case 2:
-        $bclass = ' bottoncioni--half';
+        $bclass = ' bottoncione--half';
         break;
     case 3:
-        $bclass = ' bottoncioni--third';
+        $bclass = ' bottoncione--third';
         break;
     case 4:
-        $bclass = ' bottoncioni--fourth';
+        $bclass = ' bottoncione--fourth';
         break;
     default:
         $bclass = '';
         break;
 }
-echo $bclass;
 if ( have_rows('bottoncioni') ) : ?>
     <ul class="bottoncioni-container">
     <?php while( have_rows('bottoncioni') ) : the_row(); ?>
