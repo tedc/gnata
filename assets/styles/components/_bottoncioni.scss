@@ -19,20 +19,20 @@
 
     &--half{
 
-        @include breakpoint($medium){
+        @include breakpoint(850px){
             @include span(6 of 12 0 after);
         }
     }
 
     &--third{
 
-        @include breakpoint($medium){
+        @include breakpoint(850px){
             @include span(4 of 12 0 after);
         }
     }
 
     &--fourth {
-        @include breakpoint($medium){
+        @include breakpoint(850px){
             @include span(3 of 12 0 after);
         }
     }
