@@ -14,9 +14,11 @@
       </div>
       <span class="video-hero__playtext"><?php pll_e( 'Play video', 'gnata' ); ?></span>
     </a>
-    <video loop muted autoplay class="video-hero__video">
-        <source src="<?php echo get_template_directory_uri(); ?>/dist/images/gnata-corporate-taglio.mp4" type="video/mp4">
-        <source src="<?php echo get_template_directory_uri(); ?>/dist/images/gnata-corporate-taglio.ogg" type="video/ogg">
+    <?php $estratto = preg_replace('/\\.[^.\\s]{3,4}$/', '', get_field('video_estratto')); ?>        
+    <video loop muted autoplay class="video-hero__video" poster="<?php echo $estratto; ?>.jpg">
+        <source src="<?php echo $estratto; ?>.mp4" type="video/mp4">
+        <source src="<?php echo $estratto; ?>.ogv" type="video/ogv">
+        <source src="<?php echo $estratto; ?>.webm" type="video/webm">
     </video>
     
     <header class="header header--home">
@@ -64,8 +66,11 @@
       <div class="video__close">
         <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
       </div>
-      <video id="thevideo">
-        <source src="<?php echo get_template_directory_uri();?>/dist/images/gnata-corporate.mp4" type="video/mp4">
+      <?php $video = preg_replace('/\\.[^.\\s]{3,4}$/', '', get_field('video_corporate')); ?>        
+      <video id="thevideo" poster="<?php echo $video; ?>.jpg">
+        <source src="<?php echo $video; ?>.mp4" type="video/mp4">
+        <source src="<?php echo $video; ?>.ogv" type="video/ogv">
+        <source src="<?php echo $video; ?>.webm" type="video/mp4">
       </video>
       <div class="video__controls">
         <div class="playbutton"></div>

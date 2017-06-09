@@ -61,3 +61,8 @@ if ( !function_exists( 'acf_unset_language_to_default' ) )
         remove_filter( 'acf/settings/current_language', __NAMESPACE__ . '\\acf_get_language_default', 100 );
     }
 }
+
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
