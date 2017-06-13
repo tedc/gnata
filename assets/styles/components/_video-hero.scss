@@ -106,8 +106,16 @@
         
         video{
             width: 100%;
-            height: auto;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
         }
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 0;
     }
 
     &__controls{

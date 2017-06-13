@@ -66,12 +66,16 @@
       <div class="video__close">
         <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
       </div>
-      <?php $video = preg_replace('/\\.[^.\\s]{3,4}$/', '', get_field('video_corporate')); ?>        
+      <?php 
+      $v = get_field('video_corporate');
+      $video = preg_replace('/\\.[^.\\s]{3,4}$/', '', get_field('video_corporate')['url']); ?>
+      <div class="video__wrapper" style="padding-top: <?php echo ( $v['height'] * 100 ) / $v['width']; ?>%">    
       <video id="thevideo" poster="<?php echo $video; ?>.jpg">
         <source src="<?php echo $video; ?>.mp4" type="video/mp4">
         <source src="<?php echo $video; ?>.ogv" type="video/ogv">
         <source src="<?php echo $video; ?>.webm" type="video/mp4">
       </video>
+      </div>
       <div class="video__controls">
         <div class="playbutton"></div>
         <div class="stopbutton"></div>
