@@ -52,11 +52,19 @@
             width: 122px;
             height: auto;
         }
+        .cls-1{
+            .page-template-template-macchina & {
+                fill: $blu !important;
+            }
+        }
 
         .header__logo-home{
             
             .cls-1{
                 fill: #fff;
+                .page-template-template-macchina & {
+                    fill: $blu !important;
+                }
             }
 
             &--blu{
