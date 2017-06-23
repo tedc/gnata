@@ -1,4 +1,4 @@
-$p: (3 / 4) * 100vh;
+$p: (3 / 4) * 100vw;
 .focus{
     @include container(1286px);
     padding: $p rem(40) 0;
@@ -33,11 +33,11 @@ $p: (3 / 4) * 100vh;
         line-height: rem(33);
         font-weight: 200;
         letter-spacing: 0.04px;
-        color: #fff;
+        color: $font-color;
 
-        @include breakpoint($medium){
-            color: $font-color;
-        }
+        // @include breakpoint($medium){
+        //     color: $font-color;
+        // }
 
         h2{
             font-family: $header-font;
