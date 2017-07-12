@@ -1,4 +1,5 @@
 <?php 
+    if(get_row_layout() == 'flex_slider') {
     		$images = get_sub_field('flex_images'); 
     		$dida = get_sub_field('flex_dida');
     		if($images) : ?>
@@ -16,4 +17,4 @@
     	<?php endforeach; ?>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; } ?>
