@@ -27,7 +27,7 @@ $kind = (get_sub_field('shift_kind'));
     	</div>
     	<?php endif; ?>
     </div>
-	<?php else; ?>
+	<?php endif; ?>
     <?php if( get_sub_field('shift_testo') ) : ?>
     <div class="shift__struttura">
     <div class="shift__content">
