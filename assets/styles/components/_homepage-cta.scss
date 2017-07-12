@@ -12,13 +12,15 @@
     
 
     &__paragrafo{
-        background-color: #fff;
-        border: 1px solid $grey--dark;
+        // background-color: #fff;
+        // border: 1px solid $grey--dark;
         padding: rem(40);
 
         @include breakpoint($medium){
-            width: 55%;
-            padding: rem(50) rem(80);
+            //width: 55%;
+            width: 50%;
+            //padding: rem(50) rem(80);
+            padding: rem(50) rem(80) rem(50) 0;
         }
 
         h4{
