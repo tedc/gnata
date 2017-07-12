@@ -84,6 +84,11 @@
             z-index: -1;
             transition: padding 0.3s ease-in-out;
         }
+        strong {
+            display: block;
+            font-size: rem(14);
+            font-weight: 400;
+        }
     }
 
     span{

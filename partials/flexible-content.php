@@ -12,7 +12,8 @@
             <?php if ( get_row_layout() == 'flex_coppiaimg' ) : ?>
                 <?php get_template_part( 'partials/flex-coppiaimg' ); ?>
             <?php endif; ?>
-        
+            
+            <?php get_template_part( 'partials/flex-slider' ); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
