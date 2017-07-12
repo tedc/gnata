@@ -170,4 +170,7 @@
     position: relative;
     margin: rem(40) auto;
     max-width: 1286px;
+    @include breakpoint($medium) {
+        height: calc(100vh - #{rem(134)})
+    }
 }
