@@ -103,7 +103,7 @@
     if ( have_rows('bottoncioni') ) : ?>
       <ul class="bottoncioni-container">
       <?php while( have_rows('bottoncioni') ) : the_row(); ?>
-          <?php $bottoncione_testo = get_sub_field('bottoncione_name'); ?>
+          <?php $bottoncione_testo = strip_tags(get_sub_field('bottoncione_name'), '<strong>'); ?>
           <?php $bottoncione_bg = get_sub_field('bottoncione_bg'); ?>
           <?php $bottoncione_link = get_sub_field('bottoncione_link'); ?>
           
