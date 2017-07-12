@@ -76,7 +76,6 @@ $p: (3 / 4) * 100vw;
         left: 0;
         z-index: -1;
         overflow: hidden;
-
         &:before{
             content: '';
             position: absolute;
@@ -89,6 +88,16 @@ $p: (3 / 4) * 100vw;
             z-index: -2;
 
             @include breakpoint($medium){
+                display: none;
+            }
+        }
+
+        
+        &--slider {
+            img {
+                display: none;
+            }
+            &:before {
                 display: none;
             }
         }
@@ -118,6 +127,22 @@ $p: (3 / 4) * 100vw;
             height: 100%;
             object-fit: cover;
         }
+    }
+    &__slider, &__slider .slick-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        .slick-track {
+            height: 100%;
+        }
+    }
+    &__slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     &__playcontainer{

@@ -6,11 +6,25 @@
   </div>
   <?php endif; ?>
   <?php if ( get_sub_field('flex_focus_img') ) : ?>
-    <?php $focus_bg = get_sub_field('flex_focus_img'); ?>
+    <?php 
+    $kind = get_sub_field('flex_image_kind');
+    if($kind == 0) {
+    $focus_bg = get_sub_field('flex_focus_img'); ?>
     <div class="focus__visual" style="background-image: url('<?php echo $focus_bg; ?>');">
 
     </div>
-  <?php endif; ?>
+    <?php } else { ?>
+    <div class="focus__visual focus__visual--slider">
+    <div class="focus__slider">
+      <?php foreach ($images as $image) : ?>
+      <figure class="focus__slide" style="background-image:url(<?php echo $image['url']; ?>)">
+        <?php echo wp_get_attachment_image( $image['ID'], 'large' ); ?>
+      </figure>
+      <?php endforeach; ?>
+    </div>
+    </div>
+    
+  <?php } endif; ?>
 
   <?php if ( get_sub_field('flex_focus_vid') ) : ?>
     <div class="focus__visual">
