@@ -53,6 +53,9 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__playcontainer{
@@ -64,7 +67,7 @@
         position: relative;
         float: left;
         transition: all 0.3s ease-in-out;
-
+        flex: 0 0 auto;
         .video-hero__button:hover &{
             background-color: rgba(255, 255, 255, 0.6);
         }
@@ -85,7 +88,8 @@
         display: block;
         float: left;
         font-size: rem(22);
-        line-height: rem(40);
+        //line-height: rem(40);
+        line-height: 1;
         font-weight: 100;
         color: #fff;
         text-transform: uppercase;
