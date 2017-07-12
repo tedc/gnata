@@ -111,15 +111,15 @@
         ol {
             counter-reset: section;
             li {
-                padding: 0 0 0 rem(25);
+                padding: 0 0 0 rem(30);
                 &:before{
                     width: 20px;
                     height: 20px;
-                    line-height: 20px;
+                    line-height: 18px;
                     font-size: 12px;
                     font-weight: 400;
                     text-align: center;
-                    top: rem(8);
+                    top: rem(6);
                     color: white;
                     counter-increment: section;
                     content: counter(section, lower-alpha);
