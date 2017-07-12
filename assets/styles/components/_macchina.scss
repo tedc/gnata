@@ -85,7 +85,7 @@
             font-weight: 200;
         }
 
-        ul{
+        ul, ol {
             font-size: rem(16);
             line-height: rem(28);
             padding-top: rem(12);
@@ -105,6 +105,22 @@
                     border-radius: 100%;
                     top: rem(12);
                     left: 0;
+                }
+            }
+        }
+        ol {
+            counter-reset: section;
+            li {
+                &:before{
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: center;
+                    top: rem(8);
+                    color: white;
+                    content: counter(section, lower-alpha);
                 }
             }
         }
