@@ -111,6 +111,7 @@
         ol {
             counter-reset: section;
             li {
+                padding: 0 0 0 rem(25);
                 &:before{
                     width: 20px;
                     height: 20px;
