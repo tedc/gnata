@@ -13,7 +13,7 @@ $kind = (get_sub_field('shift_kind'));
     		$images = get_sub_field('shift_slider'); 
     		$dida = get_sub_field('shift_dida');
     		if($images) : ?>
-    	<div class="shift__slider" data-slick='{"fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true}'>
+    	<div class="shift__slider">
     		<?php foreach ($images as $image) : ?>
     		<figure class="shift__slide" style="background-image:url(<?php echo $image['url']; ?>)">
     			<?php echo wp_get_attachment_image( $image['ID'], 'large' ); ?>
