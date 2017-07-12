@@ -54,9 +54,9 @@
     <div class="tabella">
       <table>
         <tr>
-          <th>Modello</th>
-          <th>Diametro tubi stampabili</th>
-          <th>Velocità di estrusione</th>
+          <th><?php _e('Modello', 'gnata'); ?></th>
+          <th><?php _e('Ø Tubi in mm', 'gnata'); ?></th>
+          <th><?php _e('Velocità di estrusione metri/minuto', 'gnata'); ?></th>
         </tr>
 
         <?php while( have_rows('macchina_table') ) : the_row(); ?>
