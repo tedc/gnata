@@ -42,7 +42,7 @@
             return index % 2 == 1;
             }).addClass("shift--inverted");
 
-            $('.shift__slider').each(function() {
+            $('.shift__slider, .focus__slider').each(function() {
               $(this).slick({"fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true});
             })
 
