@@ -120,6 +120,7 @@
                     text-align: center;
                     top: rem(8);
                     color: white;
+                    counter-increment: section;
                     content: counter(section, lower-alpha);
                 }
             }
