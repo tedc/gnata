@@ -28,7 +28,8 @@
 
     <section class="lista-marcatrici">
 
-      <?php $marcatrice = 0; while( have_rows('marcatrici_list_marcatrice') ) : the_row(); ?>
+      <?php $marcatrice = 0; while( have_rows('marcatrici_list_marcatrice') ) : the_row(); 
+      ?>
 
       <?php $bg = get_sub_field('marcatrice_bg'); ?>
 
