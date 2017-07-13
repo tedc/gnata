@@ -76,11 +76,21 @@
     }
 }
 
-.remodal--table {
-    background: {
-        size: contain;
-        position: center;
-        repeat: no-repeat;
+.remodal {
+    &__close {
+        @extend %close;
     }
-    background-color: transparentize(white, .05);
+    &--table {
+        background: {
+            size: contain;
+            position: center;
+            repeat: no-repeat;
+        }
+        background-color: transparentize(white, .05);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 }
