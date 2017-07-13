@@ -64,7 +64,7 @@
           <td>
             <?php if(get_sub_field('macchina_table_immagine')) : ?>
             <a href="#table-modal-<?php echo $t; ?>"><?php the_sub_field('macchina_table_modello'); ?></a>
-            <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php the_sub_field('macchina_table_immagine')); ?>">
+            <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php the_sub_field('macchina_table_immagine'); ?>)">
                 <div class="remodal__close">
                   <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
                 </div>
@@ -82,7 +82,7 @@
             <?php the_sub_field('macchina_table_velocita'); ?>
           </td>
         </tr>
-        <?php endwhile; ?>
+        <?php $t++; endwhile; ?>
       </table>
     </div>
 
