@@ -72,7 +72,6 @@
           <?php else : ?>
             <?php the_sub_field('macchina_table_modello'); ?>
           <?php endif; ?>
-          <?php the_sub_field('macchina_table_modello'); ?>
           </td>
 
           <td>
