@@ -59,10 +59,19 @@
           <th><?php _e('Velocità di estrusione metri/minuto', 'gnata'); ?></th>
         </tr>
 
-        <?php while( have_rows('macchina_table') ) : the_row(); ?>
+        <?php $t = 0; while( have_rows('macchina_table') ) : the_row(); ?>
         <tr>
           <td>
+            <?php if(get_sub_field('macchina_table_immagine')) : ?>
+            <a href="#table-modal-<?php echo $t; ?>"><?php the_sub_field('macchina_table_modello'); ?></a>
+            <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php the_sub_field('macchina_table_immagine')); ?>">
+                <div class="remodal__close">
+                  <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
+                </div>
+            </div>
+          <?php else : ?>
             <?php the_sub_field('macchina_table_modello'); ?>
+          <?php endif; ?>
           </td>
 
           <td>

@@ -59,6 +59,13 @@
         font-weight: 400;
         text-transform: uppercase;
         color: $blu;
+        a {
+            color: $blu;
+            text-decoration: none;
+            &:hover {
+                color: $grey--dark;
+            }
+        }
     }
 
     &.is-visible{
@@ -67,4 +74,13 @@
             opacity: 1;
         }
     }
+}
+
+.remodal--table {
+    background: {
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+    }
+    background-color: transparentize(white, .05);
 }
