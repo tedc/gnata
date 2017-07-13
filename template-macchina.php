@@ -62,7 +62,7 @@
         <?php $t = 0; while( have_rows('macchina_table') ) : the_row(); ?>
         <tr>
           <td>
-            <?php if(get_sub_field('macchina_table_immagine')) : ?>
+            <?php if(get_sub_field('macchina_table_immagine') != '') : ?>
             <a href="#table-modal-<?php echo $t; ?>"><?php the_sub_field('macchina_table_modello'); ?></a>
             <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php the_sub_field('macchina_table_immagine'); ?>)">
                 <div class="remodal__close">
