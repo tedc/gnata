@@ -178,6 +178,8 @@
     }
     &--split {
         @include breakpoint($medium){
+            height: auto;
+            min-height: calc(100vh - #{rem(134)});
             .slick-prev, .slick-next {
                 top: 50%;
                 left: 50%;
@@ -191,8 +193,15 @@
         }
     }
     .shift__slide--columns {
+        position: relative;
         display: flex;
+        .slide__image {
+            height: 75vw;
+        }
         @include breakpoint($medium) {
+            .slide__image {
+                height: auto;
+            }
             .slide__image, .slide__dida {
                 width: 50%;
             }
