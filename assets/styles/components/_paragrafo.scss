@@ -11,6 +11,19 @@
         padding: rem(125) rem(120);
     }
 
+    &--padding {
+        &-top {
+            padding-bottom: 0 !important;
+        }
+        &-bottom {
+            padding-top: 0 !important;
+        }
+        &-no {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+
     h2{
         font-family: $header-font;
         color: $blu;
