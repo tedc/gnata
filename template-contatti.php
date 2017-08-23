@@ -87,7 +87,7 @@
     <?php endif; ?>
 
     <div class="main-form">
-        <?php echo do_shortcode( '[contact-form-7 id="299" title="natural-contact" html_class="nl-form" html_id="nl-form"]' ); ?>
+        <?php echo do_shortcode( get_field('contact_field') ); ?>
     </div>
 
     </div><!-- /container -->
