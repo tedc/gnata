@@ -119,16 +119,16 @@
             .sub-menu {
                 position: absolute;
                 top: 100%;
-                left: 0;
+                right: 0;
                 background-color: white;
+                padding: 0 rem(10);
                 li {
                     margin: 0;
-                    display: block;
-                    padding: rem(20);
+                    padding: rem(10);
                     &:last-child{
                         margin-right: 0;
                         border-left: 0;
-                        padding-left: 0;
+                        padding-left: rem(10);
                     }
                 }
             }
