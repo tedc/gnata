@@ -67,6 +67,10 @@
                 bottom: 0;
                 left: 0;
                 background-color: $grey--dark;
+                html[dir="rtl"] & {
+                    left: auto;
+                    right: 0;
+                }
             }
         }
 

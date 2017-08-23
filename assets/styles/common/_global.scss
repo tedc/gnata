@@ -52,6 +52,19 @@ body{
     }
 }
 
+htlm[lang="de-DE"] {
+  font-size: 70%;
+  @include breakpoint($medium){
+      font-size: 90%;
+  }
+  body {
+    font-size: 70%;
+    @include breakpoint($medium){
+        font-size: 90%;
+    }
+  }
+}
+
 body{
   position: relative;
   color: $font-color;
