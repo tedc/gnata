@@ -170,7 +170,7 @@ function non_roots_scripts() {
   $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
   //after wp_enqueue_script
 
-    if (is_page('contatti') || is_page( 'contacts' )){
+    if (is_page_template('template-contatti.php')){
           wp_enqueue_script( 'googlemaps' );
       }
 
