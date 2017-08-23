@@ -86,7 +86,7 @@
         li{
             display: inline-block;
             margin-right: rem(30);
-
+            position: relative;
             &.current-menu-item{
                 a{
                     color: $blu;
