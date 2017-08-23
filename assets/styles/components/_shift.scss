@@ -176,4 +176,29 @@
     @include breakpoint($medium) {
         height: calc(100vh - #{rem(134)})
     }
+    &--split {
+        @include breakpoint($medium){
+            .slick-prev, .slick-next {
+                top: 50%;
+                left: 50%;
+            }
+            .slick-prev {
+                transform: translate3d(-50%, -100%, 0);
+            }
+            .slick-next {
+                transform: translate3d(-50%, 100%, 0);
+            }
+        }
+    }
+    .shift__slide--columns {
+        display: flex;
+        @include breakpoint($medium) {
+            .slide__image, .slide__dida {
+                width: 50%;
+            }
+        }
+        .slide__dida {
+            padding: rem(50);
+        }
+    }
 }
