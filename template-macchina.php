@@ -54,9 +54,9 @@
     <div class="tabella">
       <table>
         <tr>
-          <th><?php _e('Modello', 'gnata'); ?></th>
-          <th><?php _e('Ø Tubi in mm', 'gnata'); ?></th>
-          <th><?php _e('Velocità di estrusione metri/minuto', 'gnata'); ?></th>
+          <th><?php pll_e('Modello', 'gnata'); ?></th>
+          <th><?php pll_e('Ø Tubi in mm', 'gnata'); ?></th>
+          <th><?php pll_e('Velocità di estrusione metri/minuto', 'gnata'); ?></th>
         </tr>
 
         <?php $t = 0; while( have_rows('macchina_table') ) : the_row(); ?>
