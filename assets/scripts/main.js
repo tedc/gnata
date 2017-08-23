@@ -20,7 +20,15 @@
       init: function() {
 
         $(document).ready(function () {
-            
+            $('.menu-item-has-children').each(function() {
+              var a = $(this).find('a:first'),
+                  submenu = $(this).find('.sub-menu:first');
+                  a.on('click', function(e) {
+                    e.preventDefault()
+                    submenu.toggleClass('active');
+                  })
+
+            })
             // Inietta svg in immagine
             var mySVGsToInject = document.querySelectorAll('img.svg-inject');
             new SVGInjector(mySVGsToInject);

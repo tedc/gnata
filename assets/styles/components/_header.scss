@@ -86,7 +86,6 @@
         li{
             display: inline-block;
             margin-right: rem(30);
-            position: relative;
             &.current-menu-item{
                 a{
                     color: $blu;
@@ -122,6 +121,15 @@
                 right: 0;
                 background-color: white;
                 padding: 0 rem(10);
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .3s, visibility .3s;
+                width: 100vw;
+                text-align: right;
+                &.active {    
+                    visibility: visible;
+                    opacity: 1;
+                }
                 li {
                     margin: 0;
                     padding: rem(10);
