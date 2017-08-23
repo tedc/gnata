@@ -24,4 +24,31 @@
             }
         }
     }
+    .coppiaimg__slider {
+        height: 75vw;
+        overflow: visible;
+        @include breakpoint($medium){
+            @include span(6 of 12 0.4 after last);
+            .slick-prev, .slick-next {
+                top: 50%;
+                left: 0;
+                .shift--inverted & {
+                    left: auto;
+                    right: 0;
+                }
+            }
+            .slick-prev {
+                transform: translate3d(-50%, -100%, 0);
+                .shift--inverted & {
+                    transform: translate3d(50%, -100%, 0);
+                }
+            }
+            .slick-next {
+                transform: translate3d(-50%, 100%, 0);
+                .shift--inverted & {
+                    transform: translate3d(50%, 100%, 0);
+                }
+            }
+        }
+    }
 }
