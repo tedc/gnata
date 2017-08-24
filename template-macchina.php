@@ -87,7 +87,9 @@
     </div>
 
     <?php endif; ?>
+    
 
+    <?php get_template_part( 'partials/flexible-content' ); ?>
     <!--Bottoncioni-->
     <?php 
     $length = count(get_field('bottoncioni'));
