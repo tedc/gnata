@@ -129,6 +129,9 @@
                 transition: opacity .3s, visibility .3s;
                 width: 100vw;
                 text-align: right;
+                .header--home & {
+                    background-color: transparent;
+                }
                 &.active {    
                     visibility: visible;
                     opacity: 1;
