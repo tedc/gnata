@@ -21,7 +21,7 @@
           <span>
           <?php
           $anc = get_ancestors($post->ID,'page');
-          echo get_the_title($anc->ID);
+          echo get_the_title($anc);
           ?>
           </span>
           <?php if ( get_field('macchina_title') ) : ?>
