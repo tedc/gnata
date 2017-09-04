@@ -65,8 +65,8 @@
             <?php if(get_sub_field('macchina_table_immagine') != '') : ?>
             <a href="#table-modal-<?php echo $t; ?>"><?php the_sub_field('macchina_table_modello'); ?></a>
             <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php 
-              $original_post = pll_get_post($post->ID, pll_default_language());
-            get_sub_field('macchina_table_immagine', $original_post->ID); ?>)">
+              $original_post = pll_get_post(get_the_ID(), pll_default_language());
+            get_sub_field('macchina_table_immagine', $original_post); ?>)">
             <?php //var_dump($original_post)); ?>
                 <div class="remodal__close">
                   <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
