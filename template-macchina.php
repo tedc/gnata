@@ -67,6 +67,7 @@
             <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php 
               $original_post = pll_get_post($post->ID, pll_default_language());
             get_sub_field('macchina_table_immagine', $original_post->ID); ?>)">
+            <?php var_dump($original_post->ID)); ?>
                 <div class="remodal__close">
                   <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
                 </div>
