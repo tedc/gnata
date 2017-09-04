@@ -20,7 +20,7 @@
         <div class="macchina__content">
           <span>
           <?php
-          $ancs = get_ancestors($post->ID,'page');
+          $anc = get_ancestors($post->ID,'page');
           echo get_page($anc)->post_title;
           ?>
           </span>
