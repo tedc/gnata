@@ -3,7 +3,7 @@
  * Template Name: Macchina singola
  */
 ?>
-
+<?php pll_get_post(get_the_ID(), pll_default_language()); >
   <div class="inner-wrapper">
     <?php if (function_exists('qt_custom_breadcrumbs')): ?> 
     <div class="briciole__container">
