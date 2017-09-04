@@ -3,7 +3,7 @@
  * Template Name: Macchina singola
  */
 ?>
-<?php var_dump(pll_get_post(get_the_ID(), pll_default_language())); ?>
+<?php $original_id = pll_get_post(get_the_ID(), pll_default_language()); ?>
   <div class="inner-wrapper">
     <?php if (function_exists('qt_custom_breadcrumbs')): ?> 
     <div class="briciole__container">
@@ -66,8 +66,8 @@
             <?php if(get_sub_field('macchina_table_immagine') != '') : ?>
             <a href="#table-modal-<?php echo $t; ?>"><?php the_sub_field('macchina_table_modello'); ?></a>
             <div class="remodal remodal--table" data-remodal-id="table-modal-<?php echo $t; ?>" style="background-image:url(<?php 
-              $original_post = pll_get_post(get_the_ID(), pll_default_language());
-            get_sub_field('macchina_table_immagine', $original_post); ?>)">
+            $img = get_field('macchina_table', $original_id)[$t]['macchina_table_immagine'];
+            echo $img; ?>)">
             <?php //var_dump($original_post)); ?>
                 <div class="remodal__close">
                   <span data-remodal-action="close"><?php pll_e( 'Close', 'gnata' ); ?></span>
