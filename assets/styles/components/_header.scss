@@ -51,6 +51,9 @@
             display: block;
             width: 122px;
             height: auto;
+            .home & {
+                width: 180px;
+            }
         }
         .cls-1{
             .page-template-template-macchina & {
