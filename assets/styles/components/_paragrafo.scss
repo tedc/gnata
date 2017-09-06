@@ -5,10 +5,10 @@
     font-weight: 200;
     letter-spacing: 0.04px;
     color: $font-color;
-    padding: rem(60) rem(40);
+    padding: rem(40) rem(40);
 
     @include breakpoint($medium){
-        padding: rem(125) rem(120);
+        padding: rem(80) rem(120);
     }
 
     &--padding {

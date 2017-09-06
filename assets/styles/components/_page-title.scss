@@ -3,7 +3,7 @@
     padding: 0 rem(40);
 
     @include breakpoint($medium){
-        padding: rem(125) 0;   
+        padding: rem(80) 0;   
     }
 
     &__title{
