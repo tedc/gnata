@@ -106,16 +106,17 @@
                 position: relative;
                 padding: 0 0 0 rem(15);
                 margin-bottom: rem(6);
-
-                &:before{
-                    content: '';
-                    position: absolute;
-                    width: 5px;
-                    height: 5px;
-                    background-color: $blu;
-                    border-radius: 100%;
-                    top: rem(12);
-                    left: 0;
+                &:not([style]) {
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $blu;
+                        border-radius: 100%;
+                        top: rem(12);
+                        left: 0;
+                    }
                 }
             }
         }
