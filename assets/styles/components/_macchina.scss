@@ -118,9 +118,20 @@
                 }
             }
             &[style] {
+                list-style-type: none !important;
+                counter-reset: section;
                 li {
                     &:before{
-                        display: none;
+                        counter-increment: section;
+                        content: counter(section, lower-alpha);
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        color: $blu;
+                        background-color: transparent;
+                        border-radius: none;
+                        top: rem(12);
+                        left: 0;
                     }
                 }
             }
