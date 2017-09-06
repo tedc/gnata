@@ -120,11 +120,11 @@
             &[style] {
                 list-style-type: none !important;
                 counter-reset: section;
-                padding: 0 0 0 rem(50);
                 li {
+                    padding: 0 0 0 rem(50);
                     &:before{
                         counter-increment: section;
-                        content: counter(section)".";
+                        content: counter(section)" .";
                         position: absolute;
                         width: auto;
                         height: auto;
