@@ -2,7 +2,7 @@
     @include container(1286px);
 
     @include breakpoint($medium){
-        padding-bottom: rem(200);
+        padding-bottom: rem(0);
     }
 
     .coppiaimg__img{
