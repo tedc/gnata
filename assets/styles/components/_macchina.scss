@@ -120,7 +120,7 @@
             &[style] {
                 list-style-type: none !important;
                 counter-reset: section;
-                padding: 0 0 0 rem(25);
+                padding: 0 0 0 rem(50);
                 li {
                     &:before{
                         counter-increment: section;
@@ -140,7 +140,7 @@
         ol {
             counter-reset: section;
             li {
-                padding: 0 0 0 rem(50);
+                padding: 0 0 0 rem(30);
                 &:before{
                     width: 20px;
                     height: 20px;
