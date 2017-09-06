@@ -23,6 +23,9 @@
                 @include span(6 of 12 0.4 after last);
             }
         }
+        & + .bottoncioni-container {
+            margin-top: rem(80);
+        }
     }
     .coppiaimg__slider {
         height: 75vw;

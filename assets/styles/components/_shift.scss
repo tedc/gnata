@@ -174,7 +174,8 @@
         display: none;
     }
     @include breakpoint($medium) {
-        height: calc(100vh - #{rem(134)})
+        height: calc(100vh - #{rem(134)});
+        margin: rem(80) auto;
     }
     &--split {
         @include breakpoint($medium){
