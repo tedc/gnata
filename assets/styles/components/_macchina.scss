@@ -123,14 +123,14 @@
                 li {
                     &:before{
                         counter-increment: section;
-                        content: counter(section, lower-alpha);
+                        content: counter(section)".";
                         position: absolute;
                         width: auto;
                         height: auto;
                         color: $blu;
                         background-color: transparent;
                         border-radius: none;
-                        top: rem(12);
+                        top: rem(5);
                         left: 0;
                     }
                 }
