@@ -120,6 +120,7 @@
             &[style] {
                 list-style-type: none !important;
                 counter-reset: section;
+                padding: 0 0 0 rem(25);
                 li {
                     &:before{
                         counter-increment: section;
@@ -130,7 +131,7 @@
                         color: $blu;
                         background-color: transparent;
                         border-radius: none;
-                        top: rem(5);
+                        top: 0;
                         left: 0;
                     }
                 }
