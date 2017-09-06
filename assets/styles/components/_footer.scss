@@ -3,8 +3,10 @@
     z-index: -2;
     position: relative;
     //min-height: rem(304);
-    min-height: rem(150);
-
+    min-height: rem(100);
+    .page-template-template-marcatrici &, .page-template-template-macchina &, .home & {
+        min-height: rem(150);
+    }
     &__content{
         width: 100%;
         max-width: 1286px;
@@ -14,8 +16,11 @@
         bottom:0;
         transform: translateX(-50%);
         //padding-bottom: rem(110);
-        padding-bottom: rem(90);
+        padding-bottom: rem(25);
         z-index: -1;
+        .page-template-template-marcatrici &, .page-template-template-macchina &, .home & {
+            padding-bottom: rem(90);
+        }
     }
 
     &__logo{
