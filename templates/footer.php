@@ -51,4 +51,4 @@
     <?php Extras\acf_set_language_to_default(); echo do_shortcode(get_field('configuratore_'.pll_current_language(), 'options')); Extras\acf_unset_language_to_default(); ?>
   </div>
 </div>
-<?php endif: ?>
+<?php endif; ?>
