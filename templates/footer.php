@@ -26,7 +26,7 @@
       
   </div>
 </footer>
-
+<?php if(is_front_page() || is_page_template( 'template-marcatrici.php' ) || is_page_template( 'template-macchina.php' )) : ?>
 <div class="calltoaction">
   <div class="calltoaction__header">
     <a href="#modal-config"><?php pll_e( 'Configure your machine', 'gnata' ); ?></a>
@@ -51,3 +51,4 @@
     <?php Extras\acf_set_language_to_default(); echo do_shortcode(get_field('configuratore_'.pll_current_language(), 'options')); Extras\acf_unset_language_to_default(); ?>
   </div>
 </div>
+<?php endif: ?>
