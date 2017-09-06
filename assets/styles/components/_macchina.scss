@@ -121,7 +121,7 @@
                 list-style-type: none !important;
                 counter-reset: section;
                 li {
-                    padding: 0 0 0 rem(35);
+                    padding: 0 0 0 rem(30);
                     &:before{
                         counter-increment: section;
                         content: counter(section)" .";
@@ -166,7 +166,7 @@
         @include breakpoint($medium){
             width: 100%;
             position: absolute;
-            top: rem(120);
+            top: rem(0);
             left: 50%;
             transform: translateX(-50%);
             height: auto;
