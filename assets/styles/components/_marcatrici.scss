@@ -1,3 +1,8 @@
+.page-template-template-marcatrici {
+    .page-title {
+        padding-bottom: 0;
+    }
+}
 .lista-marcatrici{
 
     @include container(1286px);
@@ -15,7 +20,7 @@
             background-repeat: no-repeat;
             min-height: 603px;
             padding: 0 rem(40) 0;
-            margin-bottom: rem(200);
+           // margin-bottom: rem(40);
             background-size: 50% auto;
 
             &:nth-child(odd){
