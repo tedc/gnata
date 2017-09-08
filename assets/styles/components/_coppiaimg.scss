@@ -8,7 +8,7 @@
     & + .bottoncioni-container {
         margin-top: rem(80);
     }
-    $max-height: calc((50vw - (1286px/2)) - #{rem(30)});
+    $max-height: calc((1286px/2) - #{rem(30)});
     .coppiaimg__img{
         height: 75vw;
         background-size: cover;
