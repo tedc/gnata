@@ -9,15 +9,15 @@
         margin-top: rem(80);
     }
     .coppiaimg__img{
-
-        height: 350px;
+        height: 75vw;
         background-size: cover;
         background-position: center center;
         
         @include breakpoint($medium){
             
             @include span(6 of 12 0.4 after);
-            height: 624px;
+            height: 100vh;
+            min-height: 50vw;
         }
 
         &:last-child{
@@ -49,7 +49,8 @@
         }
         @include breakpoint($medium){
             @include span(6 of 12 0.4 after last);
-            height: 624px;
+            height: 100vh;
+            min-height: 50vw;
         }
     }
 }
