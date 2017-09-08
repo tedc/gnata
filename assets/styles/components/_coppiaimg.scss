@@ -21,7 +21,7 @@
             max-height: 50vw;
         }
 
-        @include breakpoint(1286) {
+        @include breakpoint(1286px) {
             max-height: $max-height;
         }
 
@@ -57,7 +57,7 @@
             height: 100vh;
             max-height: 50vw;
         }
-        @include breakpoint(1286) {
+        @include breakpoint(1286px) {
             max-height: $max-height;
         }
     }
