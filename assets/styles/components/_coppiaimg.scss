@@ -10,20 +10,24 @@
     }
     $max-height: calc((1286px/2) - #{rem(30)});
     .coppiaimg__img{
-        height: 75vw;
+        &:before {
+            padding-top: 100%;
+            display: block;
+            content: '';
+        }
         background-size: cover;
         background-position: center center;
         
         @include breakpoint($medium){
             
             @include span(6 of 12 0.4 after);
-            height: 100vh;
-            max-height: 50vw;
+            // height: 100vh;
+            // max-height: 50vw;
         }
 
-        @include breakpoint(1286px) {
-            max-height: $max-height;
-        }
+        // @include breakpoint(1286px) {
+        //     max-height: $max-height;
+        // }
 
         &:last-child{
 
@@ -33,7 +37,12 @@
         }
     }
     .coppiaimg__slider {
-        height: 75vw;
+        //height: 75vw;
+        &:before {
+            padding-top: 100%;
+            display: block;
+            content: '';
+        }
         overflow: visible;
         position: relative;
         .slick-prev, .slick-next {
@@ -54,11 +63,11 @@
         }
         @include breakpoint($medium){
             @include span(6 of 12 0.4 after last);
-            height: 100vh;
-            max-height: 50vw;
+            // height: 100vh;
+            // max-height: 50vw;
         }
-        @include breakpoint(1286px) {
-            max-height: $max-height;
-        }
+        // @include breakpoint(1286px) {
+        //     max-height: $max-height;
+        // }
     }
 }
