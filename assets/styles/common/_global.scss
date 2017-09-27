@@ -6,6 +6,7 @@ $large: 64em;
 // Global boreder box
 html{
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 *,
 *:before,
@@ -47,6 +48,7 @@ body{
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
     @include breakpoint($medium){
         font-size: 100%;
     }
