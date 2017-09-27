@@ -18,7 +18,6 @@ $p: 25px;
 	.page-title__title, .lista-marcatrici__marcatrice, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content {
 		transform: translate3d($p*-1, 0, 0);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		transition-delay: 0.75s;
 		opacity: 0;
 	}
 	.homepage-intro__title, .page-title__intro, .lista-marcatrici__marcatrice--inverted, &.focus--inverted > .focus__content {
