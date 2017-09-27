@@ -63,13 +63,16 @@ if ( !function_exists( 'acf_unset_language_to_default' ) )
 }
 
 function add_coords() {
-  if(is_template_page('template-contatti.php')) {
+  if(is_template_page('template-contatti.php')) :
 ?>
   <script>
-   
+    var mapCoords = {
+      lat:  <?php $original_id = pll_get_post(get_the_ID(), 'it'); echo get_field('coordinate', $original_id)['lat']; ?>,
+      lng:  <?php $original_id = pll_get_post(get_the_ID(), 'it'); echo get_field('coordinate', $original_id)['lng']; ?>
+    }
   </script>
-<?
-  }
+<?php
+  endif;
 }
 
 add_action( 'wp_head',  __NAMESPACE__ . '\\add_coords', 100 );
