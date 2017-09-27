@@ -1,3 +1,4 @@
+$p: 25px;
 %mask_bg {
 	position: relative;
 	&:before {
@@ -14,7 +15,19 @@
 	}
 }
 .masked-row {
-	> div, h1, h2, h4, ul, ol, header, span, strong, p {
+	.page-title__title, .lista-marcatrici__marcatrice, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content {
+		transform: translate3d($p*-1, 0, 0);
+		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		transition-delay: 0.75s;
+		opacity: 0;
+	}
+	.homepage-intro__title, .page-title__intro, .lista-marcatrici__marcatrice--inverted, &.focus--inverted > .focus__content {
+		transform: translate3d($p, 0, 0);
+		opacity: 0;
+		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		transition-delay: 0.75s;
+	}
+	.focus__visual {
 		position: relative;
 		&:after {
 			content: '';
@@ -25,14 +38,14 @@
 			height: 100%;
 			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			transform: scaleX(1) translateZ(0);
-			transform-origin: left center;
+			transform-origin: right center;
 			background-color: #f8f9f9;
 			
 		}
 	}
-	> .homepage-intro__title, > .page-title__intro, > .focus__visual, &.focus--inverted > .focus__content {
+	&.focus--inverted > .focus__visual {
 		&:after {
-			transform-origin: right center;
+			transform-origin: left center;
 		}
 	}
 	&.homepage-cta {
@@ -71,22 +84,25 @@
 		&:before, &:after {
 			transition: {
 				property: transform;
-				duration: 1.25s;
+				duration: 1.5s;
 			}
 			transform: scaleX(0) translateZ(0);
 		}
-		> div, h1, h2, h4, ul, ol, header, span, strong, p {
+		.page-title__title, .lista-marcatrici__marcatrice, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__marcatrice--inverted, &.focus--inverted > .focus__content {
+			transition: {
+				property: transform;
+				duration: 1.5s;
+			}
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+		.focus__visual {
 			&:after {
 				transition: {
 					property: transform;
 					duration: 1.25s;
 				}
 				transform: scaleX(0) translateZ(0);
-			}
-		}
-		> .homepage-intro__title, > .page-title__intro, > .focus__visual, &.focus--inverted > .focus__content {
-			&:after {
-				transition-delay: .3s;
 			}
 		}
 	}
