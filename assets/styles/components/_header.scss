@@ -41,7 +41,9 @@
     width: 122px;
     height: auto;
     text-indent: -9999px;
-
+    [dir="rtl"] & {
+        float: left;
+    }
     a{
         width: 100%;
         height: 100%;
