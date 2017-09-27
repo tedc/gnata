@@ -764,7 +764,7 @@
               var sposta = ($(window).width() / 4);
               map.panBy(sposta, 0);
               var locations = [
-                ['Gnata', 'undefined', 'undefined', 'undefined', 'undefined', 45.710489, 9.596859, templateUrl + '/dist/images/marker.png']
+                ['Gnata', 'undefined', 'undefined', 'undefined', 'undefined', mapCoords.lat, mapCoords.lng, templateUrl + '/dist/images/marker.png']
               ];
               for (i = 0; i < locations.length; i++) {
                 if (locations[i][1] == 'undefined') {
