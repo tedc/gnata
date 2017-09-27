@@ -173,10 +173,11 @@
     }
 }
 
-.flex_video {
+.flex__video {
     margin: rem(40) auto;
     height: calc(100vh - #{rem(64)});
     max-width: 1286px;
+    position: relative;
     iframe {
         position: absolute;
         top: 0;
