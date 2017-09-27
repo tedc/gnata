@@ -41,6 +41,9 @@
     width: 122px;
     height: auto;
     text-indent: -9999px;
+    .home & {
+        width: 180px;
+    }
     [dir="rtl"] & {
         float: left;
     }
