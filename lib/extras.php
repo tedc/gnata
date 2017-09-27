@@ -63,13 +63,13 @@ if ( !function_exists( 'acf_unset_language_to_default' ) )
 }
 
 function add_coords() {
-  if(is_template_page('template-contatti.php')) :
+  if(is_template_page('template-contatti.php')) {
 ?>
   <script>
    
   </script>
 <?
-  endif;
+  }
 }
 
 add_action( 'wp_head',  __NAMESPACE__ . '\\add_coords', 100 );
