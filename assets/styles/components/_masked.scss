@@ -11,7 +11,11 @@ $p: 50px;
 		transform: scaleX(1) translateZ(0);
 		transform-origin: right center;
 		background-color: #f8f9f9;
-		content: '';
+		content: '';	
+		transition: {
+			property: transform;
+			duration: 1.5s;
+		}
 	}
 }
 %transform_left {
@@ -96,6 +100,10 @@ $p: 50px;
 			transform: scaleX(1) translateZ(0);
 			transform-origin: right center;
 			background-color: #f8f9f9;
+			transition: {
+				property: transform;
+				duration: 1.5s;
+			}
 			
 		}
 	}
@@ -128,6 +136,10 @@ $p: 50px;
 			width: 100%;
 			left: 0;
 			transform: scaleX(1) translateZ(0);
+			transition: {
+				property: transform;
+				duration: 1.5s;
+			}
 		}
 		&:before {
 			top: 0;
@@ -141,10 +153,6 @@ $p: 50px;
 	}
 	&.unmasked-row {
 		&:before, &:after {
-			transition: {
-				property: transform;
-				duration: 1.5s;
-			}
 			transform: scaleX(0) translateZ(0) !important;
 		}
 		.page-title__title, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__paragrafo--inverted, &.focus--inverted > .focus__content {
@@ -163,11 +171,7 @@ $p: 50px;
 		}
 		.focus__visual {
 			&:after {
-				transition: {
-					property: transform;
-					duration: 1.25s;
-				}
-				transform: scaleX(0) translateZ(0);
+				transform: scaleX(0) translateZ(0) !important;
 			}
 		}
 	}
