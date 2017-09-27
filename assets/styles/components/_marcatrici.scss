@@ -48,7 +48,9 @@
 
         @include breakpoint($medium){
             width: 52%;
-            padding: rem(80);
+            > [data-scrollmagic] {
+                padding: rem(80);
+            }
             text-align: left;
             // transform: translateX(-100%);
             // opacity: 0;
