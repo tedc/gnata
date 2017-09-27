@@ -64,7 +64,7 @@ $p: 50px;
 	.homepage-intro__title, .page-title__intro, &.focus--inverted > .focus__content {
 		@extend %transform_right, %transform_child_right;
 	}
-	.lista-marcatrici__paragrafo--inverted {
+	.lista-marcatrici__maractrice--inverted .lista-marcatrici__paragrafo {
 		@extend %transform_left;
 		> div {
 			@extend %transform_child_left;
