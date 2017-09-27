@@ -56,18 +56,18 @@ $p: 50px;
 		@extend %transform_left, %transform_child_left;
 	}
 	.lista-marcatrici__paragrafo {
-		@extend %transform_left;
+		@extend %transform_right;	
 		> div {
-			@extend %transform_child_left;
+			@extend %transform_child_right;
 		}
 	}
 	.homepage-intro__title, .page-title__intro, &.focus--inverted > .focus__content {
 		@extend %transform_right, %transform_child_right;
 	}
 	.lista-marcatrici__paragrafo--inverted {
-		@extend %transform_right;	
+		@extend %transform_left;
 		> div {
-			@extend %transform_child_right;
+			@extend %transform_child_left;
 		}
 	}
 	.focus__visual {
