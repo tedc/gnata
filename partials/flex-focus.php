@@ -1,5 +1,5 @@
 <?php if ( get_row_layout() == 'flex_focus' ) : ?>
-<section class="focus masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45}'>
+<section class="focus masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}'>
   <?php if ( get_sub_field('flex_focus_text') ) : ?>
   <div class="focus__content">
     <?php echo get_sub_field('flex_focus_text'); ?>

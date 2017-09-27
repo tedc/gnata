@@ -9,7 +9,7 @@
       <?php qt_custom_breadcrumbs(); ?>
     </div>
     <?php if ( get_field('title-area_title') ) : ?>
-    <section class="page-title masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45}'>
+    <section class="page-title masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}'>
       <h1 class="page-title__title">
         <?php if ( get_field('page-area_title') ) : ?>
           <?php the_field('page-area_title'); ?>
