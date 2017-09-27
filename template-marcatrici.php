@@ -9,7 +9,7 @@
       <?php qt_custom_breadcrumbs(); ?>
     </div>
     <?php if ( get_field('title-area_title') ) : ?>
-    <section class="page-title masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}'>
+    <section class="page-title masked-row" data-scrollmagic='{"class":"unmasked-row","triggerHook":0.45,"duration":0}'>
       <h1 class="page-title__title">
         <?php echo get_field('title-area_title'); ?>
       </h1>
@@ -33,7 +33,7 @@
 
       <?php $bg = get_sub_field('marcatrice_bg'); ?>
 
-      <div class="lista-marcatrici__marcatrice<?php echo ($marcatrice%2==0) ? ' lista-marcatrici__marcatrice--inverted' : ''; ?> masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg;?>')" id="marcatrice_<?php echo $marcatrice; ?>">
+      <div class="lista-marcatrici__marcatrice<?php echo ($marcatrice%2==0) ? ' lista-marcatrici__marcatrice--inverted' : ''; ?> masked-row" data-scrollmagic='{"class":"unmasked-row","triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg;?>')" id="marcatrice_<?php echo $marcatrice; ?>">
         <div class="lista-marcatrici__paragrafo">
           <div data-scrollmagic='{"tween":[{"y":400},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":"#marcatrice_<?php echo $marcatrice; ?>"}'>
           <?php if ( get_sub_field('marcatrice_title') ) : ?>

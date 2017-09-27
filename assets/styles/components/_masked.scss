@@ -120,9 +120,10 @@ $p: 50px;
 			top: 0;
 			transform-origin: left center;
 		}
-		&:before {
+		&:after {
 			top: 50%;
 			transform-origin: right center;
+			transition-delay: .5s !important;
 		}
 	}
 	&.unmasked-row {
@@ -131,17 +132,17 @@ $p: 50px;
 				property: transform;
 				duration: 1.5s;
 			}
-			transform: scaleX(0) translateZ(0);
+			transform: scaleX(0) translateZ(0) !important;
 		}
 		.page-title__title, .lista-marcatrici__paragrafo, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__paragrafo--inverted, &.focus--inverted > .focus__content {
 			transition: {
 				property: transform, opacity;
 				duration: 1.5s;
 			}
-			opacity: 1;
-			transform: translate3d(0, 0, 0);
+			opacity: 1 !important;
+			transform: translate3d(0, 0, 0) !important;
 			> *, > div > * {
-				transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0) !important;
 			}
 		}
 		.focus__visual {

@@ -36,7 +36,7 @@ if ( have_rows('bottoncioni') ) : ?>
     </ul>
 <?php endif; ?>
 
-<div class="homepage-intro masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}'>
+<div class="homepage-intro masked-row" data-scrollmagic='{"class":"unmasked-row","triggerHook":0.45,"duration":0}'>
 <?php if ( get_field('homepage_titolo') ) : ?>
     <h1 class="homepage-intro__title">
     <?php echo get_field('homepage_titolo'); ?>
@@ -61,7 +61,7 @@ if ( have_rows('bottoncioni') ) : ?>
 $bg = get_field('homepage_cta_bg');
 ?>
 
-<div class="homepage-cta masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg ?>');">
+<div class="homepage-cta masked-row" data-scrollmagic='{"class":"unmasked-row","triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg ?>');">
      <div class="homepage-cta__paragrafo">
     <?php if ( get_field('homepage_cta_title') ) : ?>
         <h4>
