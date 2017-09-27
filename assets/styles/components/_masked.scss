@@ -147,10 +147,17 @@ $p: 50px;
 			}
 			transform: scaleX(0) translateZ(0) !important;
 		}
-		.page-title__title, .lista-marcatrici__paragrafo, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__paragrafo--inverted, &.focus--inverted > .focus__content {
+		.page-title__title, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__paragrafo--inverted, &.focus--inverted > .focus__content {
 			opacity: 1 !important;
 			transform: translate3d(0, 0, 0) !important;
-			> *, > div > * {
+			> * {
+				transform: translate3d(0, 0, 0) !important;
+			}
+		}
+		.lista-marcatrici__paragrafo {
+			opacity: 1 !important;
+			transform: translate3d(0, 0, 0) !important;
+			> div > * {
 				transform: translate3d(0, 0, 0) !important;
 			}
 		}
