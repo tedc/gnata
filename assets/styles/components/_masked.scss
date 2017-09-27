@@ -1,4 +1,4 @@
-$p: 25px;
+$p: 50px;
 %mask_bg {
 	position: relative;
 	&:before {
@@ -18,13 +18,35 @@ $p: 25px;
 	.page-title__title, .lista-marcatrici__marcatrice, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content {
 		transform: translate3d($p*-1, 0, 0);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		opacity: 0;
+		opacity: 0;	
+		> * {
+			transform: translate3d((($p/2)*-1), 0, 0);
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					$d: (0.15s * $i);
+					transition-delay: $d;
+				}
+			}
+		}
 	}
 	.homepage-intro__title, .page-title__intro, .lista-marcatrici__marcatrice--inverted, &.focus--inverted > .focus__content {
 		transform: translate3d($p, 0, 0);
 		opacity: 0;
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		transition-delay: 0.75s;
+		transition-delay: 0.5s;
+		> * {
+			transform: translate3d($p, 0, 0);
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			transition-property: transform;
+			transition-duration: 1.25s;
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					$d: 0.5s + (0.15s * $i);
+					transition-delay: $d;
+				}
+			}
+		}
 	}
 	.focus__visual {
 		position: relative;
@@ -94,6 +116,9 @@ $p: 25px;
 			}
 			opacity: 1;
 			transform: translate3d(0, 0, 0);
+			> * {
+				transform: translate3d(0, 0, 0);
+			}
 		}
 		.focus__visual {
 			&:after {
