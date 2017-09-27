@@ -57,7 +57,7 @@ $p: 50px;
 	.page-title__title, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content {
 		@extend %transform_left, %transform_child_left;
 	}
-	.lista-marcatrici__paragrafo {
+	&.lista-marcatrici__marcatrice:not(.lista-marcatrici__marcatrice--inverted) .lista-marcatrici__paragrafo {
 		@extend %transform_right;	
 		> div {
 			@extend %transform_child_right;
@@ -66,7 +66,7 @@ $p: 50px;
 	.homepage-intro__title, .page-title__intro, &.focus--inverted > .focus__content {
 		@extend %transform_right, %transform_child_right;
 	}
-	&.lista-marcatrici__maractrice--inverted .lista-marcatrici__paragrafo {
+	&.lista-marcatrici__marcatrice--inverted .lista-marcatrici__paragrafo {
 		@extend %transform_left;
 		> div {
 			@extend %transform_child_left;
