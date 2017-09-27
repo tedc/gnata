@@ -117,10 +117,14 @@ $p: 50px;
 	}
 	&.lista-marcatrici__marcatrice {	
 		@extend %mask_bg;
+		&:before {
+			left: 0;
+			transform-origin: left center;
+		}
 		&--inverted {
 			&:before {
-				left: 0;
-				transform-origin: left center;
+				left: 50%;
+				transform-origin: right center;
 			}
 		}
 	}
