@@ -34,7 +34,8 @@
       <?php $bg = get_sub_field('marcatrice_bg'); ?>
 
       <div class="lista-marcatrici__marcatrice<?php echo ($marcatrice%2==0) ? ' lista-marcatrici__marcatrice--inverted' : ''; ?> masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg;?>')" id="marcatrice_<?php echo $marcatrice; ?>">
-        <div class="lista-marcatrici__paragrafo" data-scrollmagic='{"tween":[{"y":400},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":"#marcatrice_<?php echo $marcatrice; ?>"}'>
+        <div class="lista-marcatrici__paragrafo">
+          <div data-scrollmagic='{"tween":[{"y":400},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":"#marcatrice_<?php echo $marcatrice; ?>"}'>
           <?php if ( get_sub_field('marcatrice_title') ) : ?>
           <h2>
             <?php echo get_sub_field('marcatrice_title'); ?>
@@ -50,6 +51,7 @@
             <span class="pulsante__testo"><?php echo get_sub_field('marcatrice_button-txt'); ?></span>
           </a>
           <?php endif; ?>
+        </div>
         </div>
       </div>
 
