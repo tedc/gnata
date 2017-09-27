@@ -73,7 +73,7 @@
 			transform: scaleX(0) translateZ(0);
 		}
 		> div, h1, h2, h4, ul, ol, header, span, strong, p {
-			&:before {
+			&:after {
 				transition: transform .5s;
 				transform: scaleX(0) translateZ(0);
 			}
