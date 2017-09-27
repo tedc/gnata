@@ -173,6 +173,19 @@
     }
 }
 
+.flex_video {
+    margin: rem(40) auto;
+    height: calc(100vh - #{rem(64)});
+    max-width: 1286px;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
 .flex__slider {
     height: 75vw;
     position: relative;
