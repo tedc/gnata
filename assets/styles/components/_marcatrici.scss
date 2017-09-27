@@ -51,6 +51,9 @@
             > [data-scrollmagic] {
                 padding: rem(80);
             }
+            [dir="rtl"] .lista-marcatrici__marcatrice--inverted & {
+                margin-right: 48%;
+            }
             text-align: left;
             // transform: translateX(-100%);
             // opacity: 0;

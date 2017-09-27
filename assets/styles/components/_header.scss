@@ -102,6 +102,9 @@
                 margin-right: 0;
                 border-left: 1px solid #e6e7e8;
                 padding-left: rem(30);
+                [dir="rtl"] & {
+                    float: right;
+                }
             }
             &.menu-item-has-children > a {
                 cursor: pointer;

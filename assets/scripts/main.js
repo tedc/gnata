@@ -51,7 +51,8 @@
             }).addClass("shift--inverted");
 
             $('.shift__slider, .focus__slider').each(function() {
-              $(this).slick({"fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true});
+              var dir = ($('html').attr('dir') == 'rtl') ? true : false;
+              $(this).slick({"fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true,"rtl": dir});
             })
 
             // Conta dei bottoncioni
