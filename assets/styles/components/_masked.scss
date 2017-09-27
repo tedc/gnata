@@ -41,11 +41,11 @@ $p: 50px;
 
 %transform_child_right {
 	> * {
-		transform: translate3d((($p/2)*-1), 0, 0);
+		transform: translate3d(($p/2), 0, 0);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) {
-				$d: (0.15s * $i);
+				$d: 0.5s + (0.15s * $i);
 				transition-delay: $d;
 			}
 		}
@@ -94,7 +94,7 @@ $p: 50px;
 	&.homepage-cta {
 		@extend %mask_bg;
 	}
-	&.lista-marcatrici__paragrafo {	
+	&.lista-marcatrici__maractrice {	
 		@extend %mask_bg;
 		&--inverted {
 			left: 0;
