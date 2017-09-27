@@ -90,7 +90,7 @@ $p: 25px;
 		}
 		.page-title__title, .lista-marcatrici__marcatrice, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__marcatrice--inverted, &.focus--inverted > .focus__content {
 			transition: {
-				property: transform;
+				property: transform, opacity;
 				duration: 1.5s;
 			}
 			opacity: 1;
