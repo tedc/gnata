@@ -15,7 +15,7 @@
             
             <?php get_template_part( 'partials/flex-slider' ); ?>
 
-            <?php get_template_part( 'partials/flex-video' ); ?>
+            <?php if ( get_row_layout() == 'flex_coppiaimg' ) : get_template_part( 'partials/flex-video' );  endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>
 

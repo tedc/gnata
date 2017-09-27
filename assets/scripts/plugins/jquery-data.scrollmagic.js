@@ -83,6 +83,7 @@
     }
 
     function createScene(element, options) {
+        var reverse = (typeof options.reverse != "undefined") ? options.reverse : true;
         var triggerElement = options.triggerElement || element;
         if (typeof triggerElement == "function") {
             triggerElement = triggerElement.call(element);
@@ -100,7 +101,8 @@
         var scene = new ScrollMagic.Scene({
             triggerElement: triggerElement,
             triggerHook: options.triggerHook || 0,
-            duration: options.duration
+            duration: options.duration,
+            reverse : reverse
         });
         if (options.events) {
             addSceneEvents(scene, options.events);

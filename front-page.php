@@ -36,7 +36,7 @@ if ( have_rows('bottoncioni') ) : ?>
     </ul>
 <?php endif; ?>
 
-<div class="homepage-intro">
+<div class="homepage-intro masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45}'>
 <?php if ( get_field('homepage_titolo') ) : ?>
     <h1 class="homepage-intro__title">
     <?php echo get_field('homepage_titolo'); ?>
@@ -54,15 +54,15 @@ if ( have_rows('bottoncioni') ) : ?>
     <?php echo get_field('homepage_payoff'); ?>
     </h3>
 <?php endif; ?>
-    </div>    
+    </div>
 </div>
 
 <?php
 $bg = get_field('homepage_cta_bg');
 ?>
 
-<div class="homepage-cta" style="background-image: url('<?php echo $bg ?>');" data-scrollmagic='{"tween":{"backgroundPosition":"100% 35%"},"duration":"250vh","triggerHook":1}'>
-     <div class="homepage-cta__paragrafo" data-scrollmagic='{"tween":[{"y":100},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":".homepage-cta"}'>
+<div class="homepage-cta masked-row" data-scrollmagic='{"class":"unmasked-row","reverse":false,"triggerHook":0.45}' style="background-image: url('<?php echo $bg ?>');">
+     <div class="homepage-cta__paragrafo">
     <?php if ( get_field('homepage_cta_title') ) : ?>
         <h4>
         <?php echo get_field('homepage_cta_title'); ?>
@@ -81,4 +81,24 @@ $bg = get_field('homepage_cta_bg');
         
         
 </div>
+<!-- <div class="homepage-cta" style="background-image: url('<?php echo $bg ?>');" data-scrollmagic='{"tween":{"backgroundPosition":"100% 35%"},"duration":"250vh","triggerHook":1}'>
+     <div class="homepage-cta__paragrafo" data-scrollmagic='{"tween":[{"y":100},{"y":-200}],"duration":"250vh","triggerHook":1,"triggerElement":".homepage-cta"}'>
+    <?php if ( get_field('homepage_cta_title') ) : ?>
+        <h4>
+        <?php echo get_field('homepage_cta_title'); ?>
+        </h4>
+    <?php endif; ?>
+ 
+    <?php if ( get_field('homepage_cta_paragraph') ) : ?>
+        <p>
+        <?php echo get_field('homepage_cta_paragraph'); ?>
+        </p>
+    <?php endif; ?>
+    <a href="#modal-config" class="pulsante">
+        <span class="pulsante__testo"><?php pll_e( 'Configure', 'gnata' ); ?></span>
+    </a>
+    </div>
+        
+        
+</div> -->
     
