@@ -17,13 +17,22 @@ $p: 50px;
 %transform_left {
 	transform: translate3d($p*-1, 0, 0);
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	opacity: 0;	
+	opacity: 0;
+	transition: {
+		property: transform, opacity;
+		duration: 1.5s;
+	}
+		
 }
 %transform_right {
 	transform: translate3d($p, 0, 0);
 	opacity: 0;
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition-delay: 0.5s;
+	transition: {
+		property: transform, opacity;
+		duration: 1.5s;
+	}
 }
 
 %transform_child_left {
@@ -31,6 +40,7 @@ $p: 50px;
 		transform: translate3d((($p/2)*-1), 0, 0);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		transition-property: transform;
+		transition-duration: 1s;
 		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) {
 				$d: (0.15s * $i);
@@ -45,6 +55,7 @@ $p: 50px;
 		transform: translate3d(($p/2), 0, 0);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		transition-property: transform;
+		transition-duration: 1s;
 		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) {
 				$d: 0.5s + (0.15s * $i);
@@ -137,10 +148,6 @@ $p: 50px;
 			transform: scaleX(0) translateZ(0) !important;
 		}
 		.page-title__title, .lista-marcatrici__paragrafo, .homepage-intro__subtitle, .homepage-cta__paragrafo, .focus__content, .homepage-intro__title, .page-title__intro, .lista-marcatrici__paragrafo--inverted, &.focus--inverted > .focus__content {
-			transition: {
-				property: transform, opacity;
-				duration: 1.5s;
-			}
 			opacity: 1 !important;
 			transform: translate3d(0, 0, 0) !important;
 			> *, > div > * {
