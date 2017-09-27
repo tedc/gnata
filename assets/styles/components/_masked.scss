@@ -99,8 +99,10 @@ $p: 50px;
 	&.lista-marcatrici__maractrice {	
 		@extend %mask_bg;
 		&--inverted {
-			left: 0;
-			transform-origin: right center;
+			&:before {
+				left: 0;
+				transform-origin: left center;
+			}
 		}
 	}
 	&.page-header {
@@ -114,7 +116,7 @@ $p: 50px;
 			height: 51%;
 			width: 100%;
 			left: 0;
-			transform: scaleX(0) translateZ(0);
+			transform: scaleX(1) translateZ(0);
 		}
 		&:before {
 			top: 0;
