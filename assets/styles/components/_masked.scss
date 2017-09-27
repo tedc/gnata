@@ -69,14 +69,24 @@
 	}
 	&.unmasked-row {
 		&:before, &:after {
-			transition: transform .5s;
+			transition: {
+				property: transform;
+				duration: 1.25s;
+			}
 			transform: scaleX(0) translateZ(0);
 		}
 		> div, h1, h2, h4, ul, ol, header, span, strong, p {
 			&:after {
-				transition: transform .5s;
+				transition: {
+					property: transform;
+					duration: 1.25s;
+				}
 				transform: scaleX(0) translateZ(0);
+				.homepage-intro__title &, .page-title__intro &, .focus__visual &, .focus--inverted .focus__content & {
+					transform-delay: .3s;
+				}
 			}
+
 		}
 	}
 }
