@@ -39,9 +39,11 @@
     }
 
     &__paragrafo{
-        background-color: #fff;
-        border: 1px solid $grey--dark;
-        padding: rem(40);
+        > [data-scrollmagic] {
+            background-color: #fff;
+            border: 1px solid $grey--dark;
+            padding: rem(40);
+        }
         text-align: center;
 
         @include breakpoint($medium){
