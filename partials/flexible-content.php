@@ -14,6 +14,8 @@
             <?php endif; ?>
             
             <?php get_template_part( 'partials/flex-slider' ); ?>
+
+            <?php get_template_part( 'partials/flex-video' ); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
