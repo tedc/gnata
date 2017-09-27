@@ -14,7 +14,7 @@
 	}
 }
 .masked-row {
-	> * {
+	> div, h1, h2, h4, ul, ol, header {
 		position: relative;
 		&:after {
 			content: '';
