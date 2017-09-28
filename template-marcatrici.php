@@ -2,6 +2,7 @@
 /**
  * Template Name: Macchine Marcatrici
  */
+$original_id = pll_get_post(get_the_ID(), 'it');
 ?>
 
   <div class="inner-wrapper">
@@ -31,7 +32,7 @@
       <?php $marcatrice = 0; while( have_rows('marcatrici_list_marcatrice') ) : the_row(); 
       ?>
 
-      <?php $bg = get_sub_field('marcatrice_bg'); ?>
+      <?php $bg = get_sub_field('marcatrice_bg', $original_id); ?>
 
       <div class="lista-marcatrici__marcatrice<?php echo ($marcatrice%2==0) ? ' lista-marcatrici__marcatrice--inverted' : ''; ?> masked-row" data-scrollmagic='{"class":"unmasked-row","triggerHook":0.45,"duration":0}' style="background-image: url('<?php echo $bg;?>')" id="marcatrice_<?php echo $marcatrice; ?>">
         <div class="lista-marcatrici__paragrafo">
