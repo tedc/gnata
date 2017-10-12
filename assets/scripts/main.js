@@ -150,7 +150,7 @@
             $('.input-container').click(function(e) {
               e.stopPropagation();
               var target = $(this);
-              var targetInput = $(this).find('input');
+              var targetInput = $(this).find('input,textarea');
               var targetSelect = $(this).find('select');
               var styledSelect = $(this).find('.newSelect');
               var baseText = target.find('.placeholder').text();

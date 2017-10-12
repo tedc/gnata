@@ -29,20 +29,22 @@
                 <?php if ( get_field('contatti_indirizzo') ) : ?>
                     <p><?php echo get_field('contatti_indirizzo'); ?></p>
                 <?php endif; ?>
-
                 <?php if ( get_field('contatti_telefono') ) : ?>
                     <p>
                     <?php echo 'Tel. ' . get_field('contatti_telefono'); ?> <br>
                     <?php echo 'Fax ' . get_field('contatti_fax'); ?>
                     </p>
                 <?php endif; ?>
-
                 <?php if ( get_field('contatti_email') ) : ?>
                     <a href="<?php echo get_field('contatti_email'); ?>" class="mappa__mail"><?php echo get_field('contatti_email'); ?></a>
                 <?php endif; ?>
 
                 <?php if ( get_field('contatti_skype') ) : ?>
                     <p>Skype: <?php echo get_field('contatti_skype'); ?></p>
+                <?php endif; ?>
+
+                <?php if ( get_field('contatti_indirizzo_2') ) : ?>
+                    <p><?php echo get_field('contatti_indirizzo_2'); ?></p>
                 <?php endif; ?>
             </div>
         </div>
