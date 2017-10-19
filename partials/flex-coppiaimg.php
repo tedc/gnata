@@ -4,11 +4,15 @@
 <?php $rightSlider = get_sub_field('is_right_slider'); ?>
 <div class="coppiaimg">
     <div class="coppiaimg__img" style="background-image: url('<?php echo $imgSx; ?>');">
-
+        <?php if(get_sub_field('testo_sx')) : ?>
+        <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
+        <?php endif; ?>
     </div>
     <?php if($imgDx && !$rightSlider) : ?>
     <div class="coppiaimg__img" style="background-image: url('<?php echo $imgDx; ?>');">
-
+        <?php if(get_sub_field('testo_sx')) : ?>
+        <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
+        <?php endif; ?>
     </div>
 	<?php endif; ?>
 	
@@ -23,6 +27,9 @@
     		</figure>
     		<?php endforeach; ?>
     	</div>
+        <?php if(get_sub_field('testo_sx')) : ?>
+        <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
+        <?php endif; ?>
     </div>
     <?php endif; ?>
 </div>
