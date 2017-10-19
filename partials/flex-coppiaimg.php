@@ -3,14 +3,21 @@
 <?php $slider = get_sub_field('coppiaslider_dx'); ?>
 <?php $rightSlider = get_sub_field('is_right_slider'); ?>
 <div class="coppiaimg">
+    <?php if($imgSx) : ?>
+    <div class="coppiaimg__col">
     <div class="coppiaimg__img" style="background-image: url('<?php echo $imgSx; ?>');">
-        <?php if(get_sub_field('testo_sx')) : ?>
+        
+    </div>
+    <?php if(get_sub_field('testo_sx')) : ?>
         <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
         <?php endif; ?>
     </div>
-    <?php if($imgDx && !$rightSlider) : ?>
+    <?php endif; if($imgDx && !$rightSlider) : ?>
+    <div class="coppiaimg__col">
     <div class="coppiaimg__img" style="background-image: url('<?php echo $imgDx; ?>');">
-        <?php if(get_sub_field('testo_sx')) : ?>
+        
+    </div>
+    <?php if(get_sub_field('testo_sx')) : ?>
         <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
         <?php endif; ?>
     </div>
@@ -19,6 +26,7 @@
 	<?php 
     		$images = $slider; 
     		if($images && $rightSlider) : ?>
+    <div class="coppiaimg__col">
     <div class="coppiaimg__slider">
     	<div class="shift__slider">
     		<?php foreach ($images as $image) : ?>
@@ -27,9 +35,12 @@
     		</figure>
     		<?php endforeach; ?>
     	</div>
-        <?php if(get_sub_field('testo_sx')) : ?>
+        
+    </div>
+    <?php if(get_sub_field('testo_sx')) : ?>
         <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
         <?php endif; ?>
+    </div>
     </div>
     <?php endif; ?>
 </div>
