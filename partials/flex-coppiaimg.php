@@ -18,7 +18,7 @@
         
     </div>
     <?php if(get_sub_field('testo_sx')) : ?>
-        <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
+        <div class="coppiaimg__testo"><?php the_sub_field('testo_dx'); ?></div>
         <?php endif; ?>
     </div>
 	<?php endif; ?>
@@ -38,7 +38,7 @@
         
     </div>
     <?php if(get_sub_field('testo_sx')) : ?>
-        <div class="coppiaimg__testo"><?php the_sub_field('testo_sx'); ?></div>
+        <div class="coppiaimg__testo"><?php the_sub_field('testo_dx'); ?></div>
         <?php endif; ?>
     </div>
     </div>

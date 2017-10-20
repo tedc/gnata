@@ -83,14 +83,16 @@
 
         p{
             font-size: rem(16);
-            line-height: rem(28);
+            //line-height: rem(28);
+            line-height: rem(23);
             font-weight: 200;
             margin-bottom: rem(15);
         }
 
         span{
             font-size: rem(16);
-            line-height: rem(28);
+            //line-height: rem(28);
+            line-height: rem(23);
             text-transform: uppercase;
             color: $font-color;
             font-weight: 200;
@@ -98,7 +100,8 @@
 
         ul, ol {
             font-size: rem(16);
-            line-height: rem(28);
+            //line-height: rem(28);
+            line-height: rem(23);
             padding-top: rem(12);
             font-weight: 200;
 

@@ -1,6 +1,8 @@
 .coppiaimg{
     @include container(1286px);
-
+    &:before, &:after {
+        display: none;
+    }
     @include breakpoint($medium){
         padding-bottom: rem(0);
     }
@@ -9,15 +11,18 @@
         margin-top: rem(80);
     }
     $max-height: calc((1286px/2) - #{rem(30)});
-    .coppiaimg__img{
-        &:before {
-            padding-top: 100%;
-            display: block;
-            content: '';
-        }
-        background-size: cover;
-        background-position: center center;
-        
+    &__testo {
+        padding: rem(40) rem(20);
+        font-size: rem(16);
+            //line-height: rem(28);
+        line-height: rem(23);
+        font-weight: 200;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    .coppiaimg__col {
+        width: 100%;
+        flex: 0 0 auto;
         @include breakpoint($medium){
             
             @include span(6 of 12 0.4 after);
@@ -35,6 +40,17 @@
                 @include span(6 of 12 0.4 after last);
             }
         }
+    }
+    .coppiaimg__img{
+        &:before {
+            padding-top: 100%;
+            display: block;
+            content: '';
+        }
+        background-size: cover;
+        background-position: center center;
+        
+        
     }
     .coppiaimg__slider {
         //height: 75vw;

@@ -37,8 +37,15 @@
             padding: rem(130) rem(70);
         }
 
+        [dir="rtl"] & {
+            float: left;
+        }
+
         .shift--inverted &{
             float: right;
+            [dir="rtl"] & {
+                float: right;
+            }
         }
 
         h2{
@@ -200,9 +207,17 @@
         margin: rem(80) auto;
     }
     &--split {
-        @include breakpoint($medium){
+        height: auto;
+        min-height: calc(100vh - #{rem(134)});
+        .shift__slider, .shift__slider .slick-list {
+            position: relative;
             height: auto;
-            min-height: calc(100vh - #{rem(134)});
+        }
+        @include breakpoint($medium){
+            .shift__slider, .shift__slider .slick-list {
+                position: absolute;
+                height: 100%;
+            }
             .slick-prev, .slick-next {
                 top: 50%;
                 left: 50%;
@@ -218,19 +233,34 @@
     .shift__slide--columns {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         .slide__image {
+            flex: 0 0 auto;
+            width: 100%;
             height: 75vw;
+            background: {
+                position: center;
+                repeat: no-repeat;
+                size: cover;
+            }
+        }
+        .slide__dida {
+            flex: 0 0 auto;
+            width: 100%;
+            padding: rem(50);
+            font-size: rem(22);
+            line-height: rem(33);
+            color: $font-color;
+            letter-spacing: 0.04px;
+            font-weight: 200;
         }
         @include breakpoint($medium) {
             .slide__image {
-                height: auto;
+                height: calc(100vh - #{rem(134)});
             }
             .slide__image, .slide__dida {
                 width: 50%;
             }
-        }
-        .slide__dida {
-            padding: rem(50);
         }
     }
 }

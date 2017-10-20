@@ -202,7 +202,18 @@
         padding: 0;
         width: 80px;
         padding-top: rem(12);
-
+        position: relative;
+        a {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            text-indent: 130%;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+        }
         &:before{
             content: url('../images/gnata-logo.svg');
         }

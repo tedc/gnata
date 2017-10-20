@@ -35,9 +35,10 @@
 
             // Menu responsive
             $(function(){
+              var home = $('.header__logo > a').attr('href');
               $('#header-navigation').slicknav({
                 prependTo: '.mobile-header',
-                brand: ' '
+                brand: '<a href="'+home+'">Home</a>' 
               });
             });
 
@@ -52,7 +53,11 @@
 
             $('.shift__slider, .focus__slider').each(function() {
               var dir = ($('html').attr('dir') == 'rtl') ? true : false;
-              $(this).slick({"fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true,"rtl": dir});
+              var responsive = ($(this).parent().hasClass('flex__slider--split') ? [{"breakpoint" : 640,"settings" : { "adaptiveHeight" : true}}] : []
+              $(this).slick({
+                "fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":3000,"dots":false,"infinite":true,"rtl": dir,
+                "responsive" : responsive
+              });
             })
 
             // Conta dei bottoncioni
