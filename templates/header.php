@@ -6,7 +6,7 @@
 
   <?php if( is_front_page() || is_page( 'homepage-ita' )): ?>
     <div class="video-hero">
-      <div class="video-hero__payoff-container">
+      <div class="video-hero__payoff-wrapper">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/payoff.svg" alt="" class="video-hero__payoff svg-inject">
       </div>
     <a class="video-hero__button" href="#modal">
@@ -25,7 +25,7 @@
     
     <header class="header header--home">
       <div class="header__container">
-        <div class="header__logo-wrapper">
+        <div class="header__logo-container">
           <div class="header__logo">
             <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/gnata-logo.svg" class="header__logo-home svg-inject" alt=""></a>
           </div>
