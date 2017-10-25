@@ -7,8 +7,8 @@
     letter-spacing: 0.04px;
     color: $blu;    
     [lang="ru-RU"] & {
-        font-size: rem(60);
-        line-height: rem(54);
+        font-size: rem(40);
+        line-height: rem(34);
     }
 }
 %sub_title {
@@ -20,8 +20,8 @@
     letter-spacing: 0.04px;
     color: $blu;       
     [lang="ru-RU"] & {
-        font-size: rem(38);
-        line-height: rem(33);
+        font-size: rem(32);
+        line-height: rem(28);
     }
 }
 @import "modal";
