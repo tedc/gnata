@@ -25,7 +25,7 @@
     
     <header class="header header--home">
       <div class="header__container">
-        <div class="header__logo-container">
+        <div class="header__logo-wrapper">
           <div class="header__logo">
             <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/gnata-logo.svg" class="header__logo-home svg-inject" alt=""></a>
           </div>
