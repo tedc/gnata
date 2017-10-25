@@ -8,6 +8,10 @@
 
     &__title{
         @extend %page_title;
+        @include breakpoint($medium){
+            @include span(6 of 12 after);
+            padding: 0 rem(40);
+        }
     }
 
     &__intro{

@@ -10,10 +10,6 @@
         font-size: rem(60);
         line-height: rem(54);
     }
-    @include breakpoint($medium){
-        @include span(6 of 12 after);
-        padding: 0 rem(40);
-    }
 }
 %sub_title {
 	font-family: $header-font;
