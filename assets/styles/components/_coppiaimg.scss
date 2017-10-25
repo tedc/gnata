@@ -8,7 +8,7 @@
     }
     
     & + .bottoncioni-container {
-        margin-top: rem(80);
+        margin-bottom: rem(80);
     }
     $max-height: calc((1286px/2) - #{rem(30)});
     &__testo {
@@ -20,6 +20,9 @@
     }
     display: flex;
     flex-wrap: wrap;
+    &--slider {
+        margin-bottom: rem(80);
+    }
     .coppiaimg__col {
         width: 100%;
         flex: 0 0 auto;
