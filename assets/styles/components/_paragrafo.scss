@@ -25,22 +25,12 @@
     }
 
     h2{
-        font-family: $header-font;
-        color: $blu;
-        font-size: rem(80);
-        line-height: rem(72);
-        font-weight: 700;
+        @extend %page_title;
         text-transform: uppercase;
     }
 
     h3{
-        font-family: $header-font;
-        font-size: rem(55);
-        line-height: rem(50);
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 0.04px;
-        color: $blu;
+        @extend %sub_title;
     }
 
     h4{

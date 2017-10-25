@@ -7,6 +7,7 @@
     }
 
     &__title{
+        @extend %page_title;
         padding-bottom: 0.4em;
 
         @include breakpoint($medium){
@@ -14,13 +15,6 @@
 
             padding: 0 rem(40);
         }
-
-        font-family: $header-font;
-        font-size: rem(80);
-        line-height: rem(72);
-        font-weight: 700;
-        letter-spacing: rem(0.04);
-        color: $blu;
     }
 
     &__subtitle{

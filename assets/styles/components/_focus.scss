@@ -39,22 +39,13 @@ $p: (3 / 4) * 100vw;
         //     color: $font-color;
         // }
 
-        h2{
-            font-family: $header-font;
-            color: $blu;
-            font-size: rem(80);
-            line-height: rem(72);
+        h2{     
+            @extend %page_title;
             font-weight: 400;
         }
 
         h3{
-            font-family: $header-font;
-            font-size: rem(55);
-            line-height: rem(50);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.04px;
-            color: $blu;
+           @extend %sub_title;
         }
 
         h4{

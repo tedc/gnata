@@ -7,18 +7,7 @@
     }
 
     &__title{
-        font-family: $header-font;
-        font-size: rem(80);
-        line-height: rem(72);
-        font-weight: 700;
-        letter-spacing: 0.04px;
-        color: $blu;
-        padding: 0.2em 0;
-
-        @include breakpoint($medium){
-            @include span(6 of 12 after);
-            padding: 0 rem(40);
-        }
+        @extend %page_title;
     }
 
     &__intro{

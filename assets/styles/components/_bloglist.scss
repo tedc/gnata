@@ -17,13 +17,8 @@
 
         h1{
             display: block;
-            font-family: $header-font;
-            font-size: rem(80);
-            line-height: rem(72);
-            font-weight: 700;
-            letter-spacing: 0.04px;
+            @extend %page_title;
             text-transform: uppercase;
-            color: $blu;
             padding-bottom: rem(50);
 
             @include breakpoint($medium){

@@ -1,3 +1,33 @@
+%page_title {
+	padding: 0.2em 0;
+    font-family: $header-font;
+    font-size: rem(80);
+    line-height: rem(72);
+    font-weight: 700;
+    letter-spacing: 0.04px;
+    color: $blu;    
+    [lang="ru-RU"] {
+        font-size: rem(60);
+        line-height: rem(54);
+    }
+    @include breakpoint($medium){
+        @include span(6 of 12 after);
+        padding: 0 rem(40);
+    }
+}
+%sub_title {
+	font-family: $header-font;
+    font-size: rem(55);
+    line-height: rem(50);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04px;
+    color: $blu;       
+    [lang="ru-RU"] {
+        font-size: rem(38);
+        line-height: rem(33);
+    }
+}
 @import "modal";
 @import "accordion";
 @import "bloglist";

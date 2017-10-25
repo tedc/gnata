@@ -35,13 +35,9 @@
         }
 
         h1{
-            font-size: rem(80);
+            @extend %page_title;
             line-height: 1.4;
-            letter-spacing: 0.04px;
-            color: $blu;
-            font-family: $header-font;
             text-transform: uppercase;
-            font-weight: 700;
             .page-template-template-macchina &{
                 margin: {
                     top: rem(20);
