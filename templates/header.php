@@ -6,7 +6,9 @@
 
   <?php if( is_front_page() || is_page( 'homepage-ita' )): ?>
     <div class="video-hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/payoff.svg" alt="" class="video-hero__payoff svg-inject">
+      <div class="video-hero__payoff-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/payoff.svg" alt="" class="video-hero__payoff svg-inject">
+      </div>
     <a class="video-hero__button" href="#modal">
       <div class="video-hero__playcontainer">
         <div class="video-hero__play">
