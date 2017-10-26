@@ -132,6 +132,7 @@
         z-index: 0;
         height: 100%;
         width: 100%;
+        transform: translate3d(-25%, 0, 0);
     }
 }
 
@@ -215,11 +216,13 @@
         left: 0;
         width: 60px;
         height: 142px;
+        //left: 25vw!important;
     }
     @include breakpoint(1366px){
         right: 0;
-        left: 0!important;
+        //left: 0!important;
         width: 50px;
+        left: 25vw!important;
     }
 
     &__plus,&__minus{
