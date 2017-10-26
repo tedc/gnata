@@ -5,7 +5,8 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: url('../images/gnata-header.jpg') center center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 
     @include breakpoint($medium){
