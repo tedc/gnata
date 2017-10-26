@@ -7,22 +7,23 @@
     @include breakpoint($medium){
         margin-bottom: rem(150);
     }
-    @include breakpoint($medium){
-        height: 570px;
-    }
+    // @include breakpoint($medium){
+    //     height: 570px;
+    // }
 
     &__overlay{
-        position: absolute;
+        position: relative;
         top: 0;
         right: 0;
         z-index: 1;
         display: none;
-        padding: rem(80) rem(40) 0 0;
+        padding: rem(80) rem(40) rem(80) 0;
         width: 50%;
-        height: 570px;
+        min-height: rem(570);
         background: #f8f9f9;
         font-size: 14px;
         opacity: 1;
+        float: right;
 
         @include breakpoint($medium){
             display: block;
