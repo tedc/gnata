@@ -766,7 +766,7 @@
               }
               var mapElement = document.getElementById('mappa');
               var map = new google.maps.Map(mapElement, mapOptions);
-              var sposta = ($(window).width() / 4);
+              var sposta = ($(window).width()>740) ? ($(window).width() / 4) : 0;
               map.panBy(sposta, 0);
               var locations = [
                 ['Gnata', 'undefined', 'undefined', 'undefined', 'undefined', mapCoords.lat, mapCoords.lng, templateUrl + '/dist/images/marker.png']
@@ -821,9 +821,9 @@
                   var center = map.getCenter()
                   google.maps.event.trigger(map, 'resize');
                   map.setCenter(center);
-                  var sposta = ($(window).width()>740) ? ($(window).width() / 4) : 0;
-                  console.log(sposta);
-                  // map.panBy(sposta, 0);
+                  var pan = ($(window).width()>740) ? ($(window).width() / 4) : 0;
+                  console.log(pan);
+                  map.panBy(pan, 0);
              
               });
 
