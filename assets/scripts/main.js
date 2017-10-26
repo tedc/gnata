@@ -820,8 +820,8 @@
               google.maps.event.addDomListener(window, 'resize', function() {
                   google.maps.event.trigger(map, 'resize');
                   map.setCenter(map.getCenter());
-                  var sposta = ($(window).width()>740) ? ($(window).width() / 4) : 0
-                  map.panBy(sposta, 0);
+                  // var sposta = ($(window).width()>740) ? ($(window).width() / 4) : 0
+                  // map.panBy(sposta, 0);
              
               });
 
