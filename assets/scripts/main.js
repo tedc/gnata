@@ -817,6 +817,13 @@
 
               zoomControlDiv.index = 1;
               map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(zoomControlDiv);
+              google.maps.event.addDomListener(zoomOutButton, 'resize', function() {
+                  google.maps.event.trigger(map, 'resize');
+                  map.setCenter(map.getCenter());
+                  var sposta = ($(window).width()>740) ? ($(window).width() / 4) : 0
+                  map.panBy(sposta, 0);
+             
+              });
 
             }
             /* jshint ignore:end */
