@@ -821,9 +821,9 @@
                   var center = map.getCenter()
                   google.maps.event.trigger(map, 'resize');
                   map.setCenter(center);
-                  var pan = ($(window).width()>740) ? sposta : 0;
-                  console.log(pan);
-                  map.panBy(pan, 0);
+                  if($(window).width()<=740){
+                    map.panBy(0, 0);
+                  }
              
               });
 
