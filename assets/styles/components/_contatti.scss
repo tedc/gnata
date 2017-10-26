@@ -213,10 +213,10 @@
     height: 91px;
 
     @include breakpoint($medium){
-        left: 0;
+        //left: 0;
         width: 60px;
         height: 142px;
-        //left: 25vw!important;
+        left: 25vw!important;
     }
     @include breakpoint(1366px){
         right: 0;
