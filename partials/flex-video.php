@@ -2,7 +2,7 @@
 <div class="flex__video">
 	<?php 
 	$iframe = get_sub_field('flex_video');
-	$iframe = preg_replace('/(src=\")(.*)(\")/g', '$2&rel=0&showinfo=0', $iframe);
+	//$iframe = str_replace('?oembed', replace, subject)('/(src=\")(.*)(\")/g', '$1$2&rel=0&showinfo=0$3', $iframe);
 	echo $iframe;?>
 </div>
 <?php endif; ?>
