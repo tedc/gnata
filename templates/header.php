@@ -7,6 +7,12 @@
   <?php if( is_front_page() || is_page( 'homepage-ita' )): ?>
     <?php $estratto = preg_replace('/\\.[^.\\s]{3,4}$/', '', get_field('video_estratto')); ?>        
     <div class="video-hero" style="background-image:url(<?php echo $estratto; ?>.jpg)">
+    
+    <video loop muted autoplay class="video-hero__video" poster="<?php echo $estratto; ?>.jpg">
+        <source src="<?php echo $estratto; ?>.mp4" type="video/mp4">
+        <source src="<?php echo $estratto; ?>.ogv" type="video/ogv">
+        <source src="<?php echo $estratto; ?>.webm" type="video/webm">
+    </video>
       <div class="video-hero__payoff-wrapper">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/payoff.svg" alt="" class="video-hero__payoff svg-inject">
       </div>
@@ -17,12 +23,6 @@
       </div>
       <span class="video-hero__playtext"><?php pll_e( 'Play video', 'gnata' ); ?></span>
     </a>
-    <video loop muted autoplay class="video-hero__video" poster="<?php echo $estratto; ?>.jpg">
-        <source src="<?php echo $estratto; ?>.mp4" type="video/mp4">
-        <source src="<?php echo $estratto; ?>.ogv" type="video/ogv">
-        <source src="<?php echo $estratto; ?>.webm" type="video/webm">
-    </video>
-    
     <header class="header header--home">
       <div class="header__container">
         <div class="header__logo-container">
