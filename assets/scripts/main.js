@@ -53,7 +53,11 @@
 
             $('.shift__slider, .focus__slider').each(function() {
               var dir = ($('html').attr('dir') == 'rtl') ? true : false;
-              var dir = ($(this).closest('.coppiaimg').attr('dir') == 'ltr' && dir) ? false : true;
+              if(dir) {
+                dir = ($(this).closest('.coppiaimg').attr('dir') == 'ltr') ? false : true;
+              } else {
+                dir = dir;
+              }
               var responsive = ($(this).parent().hasClass('flex__slider--split')) ? [{"breakpoint" : 640,"settings" : { "adaptiveHeight" : true}}] : [];
               $(this).slick({
                 "fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":5000,"dots":false,"infinite":true,"rtl": dir, "responsive" : responsive
