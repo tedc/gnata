@@ -1,8 +1,10 @@
 <?php $imgSx = get_sub_field('coppiaimg_sx'); ?>
 <?php $imgDx = get_sub_field('coppiaimg_dx'); ?>
 <?php $slider = get_sub_field('coppiaslider_dx'); ?>
-<?php $rightSlider = get_sub_field('is_right_slider'); ?>
-<div class="coppiaimg<?php echo ($slider) ? ' coppiaimg--slider' : ''; ?>">
+<?php $rightSlider = get_sub_field('is_right_slider');
+    $dir = (pll_current_language() == 'ar') ? ' dir="ltr"' : '';
+?>
+<div class="coppiaimg<?php echo ($slider) ? ' coppiaimg--slider' : ''; ?>"<?php echo $dir; ?>>
     <?php if($imgSx) : ?>
     <div class="coppiaimg__col">
     <div class="coppiaimg__img" style="background-image: url('<?php echo $imgSx; ?>');">
