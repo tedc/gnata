@@ -57,7 +57,7 @@
               console.log(dir);
               var responsive = ($(this).parent().hasClass('flex__slider--split')) ? [{"breakpoint" : 640,"settings" : { "adaptiveHeight" : true}}] : [];
               $(this).slick({
-                "fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":5000,"dots":false,"infinite":true,"rtl": true, "responsive" : responsive
+                "fade":true,"slidesToShow":1,"autoplay":true,"autoplaySpeed":5000,"dots":false,"infinite":true,"rtl": false, "responsive" : responsive
               });
             })
 
