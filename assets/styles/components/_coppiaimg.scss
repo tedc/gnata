@@ -92,14 +92,15 @@
             transform: translate3d(100%, 50%, 0);
         }
 
-        .slick-slide {
-            [dir="rtl"] [dir="ltr"] &{
-                float: left;
-            }
-        }
+        
        
         // @include breakpoint(1286px) {
         //     max-height: $max-height;
         // }
+    }
+    &[dir="ltr"]{
+        .slick-slide {
+            float: left!important;
+        }
     }
 }
