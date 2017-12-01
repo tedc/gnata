@@ -14,7 +14,11 @@
       <?php echo get_field('footer_indirizzo', 'option'); ?>
       </p>
     <?php endif; ?>
-
+    <?php if(get_field('privacy', 'option')) :
+      $privacy = pll_get_post(get_field('privacy'), pll_current_language());
+       ?>
+      <a href="<?php echo get_permalink($privacy->ID); ?>"><?php _e('Privacy', 'gnata'); ?></a>
+    <?php endif; ?>
     <?php if ( get_field('footer_credits', 'option') ) : ?>
         <a href="http://www.bspkn.it/" class="footer__credits-link" target="_blank">
           <img class="footer__credits svg-inject" src="<?php the_field('footer_credits', 'option'); ?>" alt="BSPKN Studio">
