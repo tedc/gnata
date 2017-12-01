@@ -16,6 +16,7 @@
     <?php endif; ?>
     <?php if(get_field('privacy', 'option')) :
       $privacy = pll_get_post(get_field('privacy'), pll_current_language());
+      var_dump($privacy);
        ?>
       <a href="<?php echo get_permalink($privacy->ID); ?>"><?php _e('Privacy', 'gnata'); ?></a>
     <?php endif; ?>
