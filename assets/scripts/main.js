@@ -221,9 +221,9 @@
               selectOption.each(function(index, value) {
                 console.log(hiddenOptions[index]);
                 var optionContents = $(this).html();
-                
+
                 //var optionValue = (checkLang) ? hiddenOptions[index].attr('value') : $(this).attr('value');
-                target.append('<div class="newOption" data-value="' + optionValue + '" data-input="'+name+'">' + optionContents + '</div>')
+                //target.append('<div class="newOption" data-value="' + optionValue + '" data-input="'+name+'">' + optionContents + '</div>')
               });
             });
 
