@@ -235,7 +235,6 @@
               var siblingOptions = $(this).parent().parent().find('.newOption');
               var newValue = $(this).attr('data-value');
               var newContent = $(this).html();
-              console.log(newContent);
               var name = $(this).attr('data-input');
               var selectOption = $(this).parent().parent().find('select option');
               // style selected option
@@ -245,7 +244,7 @@
               var target = $(this).closest('.input-container');
               var placeholder = target.find('.placeholder');
               target.removeClass('active');
-              placeholder.html(newValue); 
+              placeholder.html(newContent); 
               if(newValue!='') {
                 target.addClass('filled');
               } else {
