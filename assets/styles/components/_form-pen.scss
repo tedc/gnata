@@ -7,6 +7,10 @@
     }
 }
 
+.wpcf7-form-control-wrap[class*="-hidden"] {
+  display: none;
+}
+
 [data-class="wpcf7cf_group"] {
   display: inline;
   &.wpcf7cf-hidden {
