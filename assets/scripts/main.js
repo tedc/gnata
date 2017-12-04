@@ -216,7 +216,7 @@
               var target = $(this).parent().find('.newOptions');
               var name = $(this).attr('name').replace('-select', '');
               var hiddenName = $(this).attr('name') + '-hidden';
-              var hiddenOptions = $('[name="'+hiddenName+'"]').find('options');
+              var hiddenOptions = $('[name="'+hiddenName+'"]').find('option');
               var checkLang = ($(this).hasClass('fancy-select-it')) ? false : true;
               selectOption.each(function(index, value) {
                 var optionContents = $(this).html();
