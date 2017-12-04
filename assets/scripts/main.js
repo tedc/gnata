@@ -215,9 +215,12 @@
               var selectOption = $(this).find('option');
               var target = $(this).parent().find('.newOptions');
               var name = $(this).attr('name').replace('-select', '');
-              selectOption.each(function() {
+              var hiddenName = $(this).attr('name') + '-hidden';
+              var hiddenOptions = $('[name="'+hiddenName+'"]').find('options');
+              var checkLang = ($(this).hasClass('fancy-select-it')) ? false : true;
+              selectOption.each(function(index, value) {
                 var optionContents = $(this).html();
-                var optionValue = $(this).attr('value');
+                var optionValue = (checkLang) ? hiddenOptions[index].attr('value') : $(this).attr('value');
                 target.append('<div class="newOption" data-value="' + optionValue + '" data-input="'+name+'">' + optionContents + '</div>')
               });
             });
