@@ -234,6 +234,8 @@
               var OptionInUse = $(this);
               var siblingOptions = $(this).parent().parent().find('.newOption');
               var newValue = $(this).attr('data-value');
+              var newContent = $(this).html();
+              console.log(newContent);
               var name = $(this).attr('data-input');
               var selectOption = $(this).parent().parent().find('select option');
               // style selected option
