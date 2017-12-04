@@ -219,6 +219,7 @@
               var hiddenOptions = $('[name="'+hiddenName+'"]').find('option');
               var checkLang = ($(this).hasClass('fancy-select-it')) ? false : true;
               selectOption.each(function(index, value) {
+                var optionContents = $(this).html();
                 var optionValue = (checkLang) ? hiddenOptions.eq(index).attr('value') : $(this).attr('value');
                 target.append('<div class="newOption" data-value="' + optionValue + '" data-input="'+name+'">' + optionContents + '</div>')
               });
